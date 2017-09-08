@@ -1,0 +1,32 @@
+{
+    "name": "dwarvesforge/wp-stack",
+    "version": "1.0.0",
+    "description": "Wordpress stack that gives you better nice classes as wrapper of the wordpress ones. It also provide a wordpress like api that can be used in template development in order to avoid copy-paste when integrating in a backend theme.",
+    "keywords": [
+        "sucrine",
+        "php",
+        "toolkit"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier Bossel",
+            "email": "olivier.bossel@gmail.com"
+        }, {
+            "name": "Paul Balanche",
+            "email": "pb@buzzbrothers.ch"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "files": [
+            "src/autoload.php"
+        ]
+    }
+}
