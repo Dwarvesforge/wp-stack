@@ -9,3 +9,12 @@ function wps_require_folder($folder) {
         }
     }
 }
+
+// archives
+wps_require_folder('archives');
+
+// comments
+wps_require_folder('comments');
+
+// posts
+wps_require_folder('posts');

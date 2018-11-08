@@ -1,9 +1,13 @@
 {
     "name": "dwarvesforge/wp-stack",
     "version": "1.0.0",
-    "description": "Wordpress stack that gives you better nice classes as wrapper of the wordpress ones. It also provide a wordpress like api that can be used in template development in order to avoid copy-paste when integrating in a backend theme.",
+    "description": "Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions.",
     "keywords": [
-        "sucrine",
+        "wp",
+        "wps",
+        "stack",
+        "wordpress",
+        "dwarvesforge",
         "php",
         "toolkit"
     ],
@@ -19,18 +23,14 @@
     ],
     "type": "library",
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.0",
+        "dwarvesforge/thorin": "^1.1",
+        "paquettg/php-html-parser": "^1.7"
     },
     "require-dev": {
         "dwarvesforge/thorin" : "dev-develop",
         "phpunit/phpunit": "5.2.*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url" : "git@github.com:Dwarvesforge/thorin.git"
-        }
-    ],
     "autoload": {
         "files": [
             "src/autoload.php"
