@@ -17,5 +17,6 @@ wps_require_classes_folder('core');
 // WP
 require_once 'WP/WPS_Post.php';
 require_once 'WP/WPS_User.php';
+require_once 'WP/WPS_Category.php';
 require_once 'WP/WPS_Comment.php';
 require_once 'WP/WPS_ACF_Post.php';

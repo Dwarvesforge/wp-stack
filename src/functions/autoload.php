@@ -13,6 +13,9 @@ function wps_require_folder($folder) {
 // archives
 wps_require_folder('archives');
 
+// categories
+wps_require_folder('categories');
+
 // comments
 wps_require_folder('comments');
 

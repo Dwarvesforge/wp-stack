@@ -16,11 +16,158 @@
 class WPS_Post {
 
 	/**
+	 * The post id
+	 * @type    {Integer}
+	 */
+	public $id = null;
+
+	/**
+	 * The post name
+	 * @type    {String}
+	 */
+	public $name = null;
+
+	/**
+	 * The post type
+	 * @type    {String}
+	 */
+	public $type = null;
+
+	/**
+	 * The post date
+	 * @type    {String}
+	 */
+	public $date = null;
+
+	/**
+	 * The post GMT date
+	 * @type    {String}
+	 */
+	public $date_gmt = null;
+
+	/**
+	 * The post status
+	 * @type    {String}
+	 */
+	public $status = null;
+
+	/**
+	 * The post comment status
+	 * @type    {String}
+	 */
+	public $comment_status = null;
+
+	/**
+	 * The post ping status
+	 * @type    {String}
+	 */
+	public $ping_status = null;
+
+	/**
+	 * The post password
+	 * @type    {String}
+	 */
+	public $password = null;
+
+	/**
+	 * The post parent id
+	 * @type    {Integer}
+	 */
+	public $parent = null;
+
+	/**
+	 * The post modified datetime
+	 * @type    {String}
+	 */
+	public $modified = null;
+
+	/**
+	 * The post modified datetime GMT
+	 * @type    {String}
+	 */
+	public $modified_gmt = null;
+
+	/**
+	 * The post comment count
+	 * @type    {Integer}
+	 */
+	public $comment_count = 0;
+
+	/**
+	 * The post menu order
+	 * @type    {Integer}
+	 */
+	public $menu_order = null;
+
+	/**
+	 * The post permalink
+	 * @type    {String}
+	 */
+	public $permalink = null;
+
+	/**
+	 * The post title with the filters applied
+	 * @type    {String}
+	 */
+	public $title = null;
+
+	/**
+	 * The post raw title
+	 * @type    {String}
+	 */
+	public $raw_title = null;
+
+	/**
+	 * The post excerpt with the filters applied
+	 * @type    {String}
+	 */
+	public $excerpt = null;
+
+	/**
+	 * The post raw excerpt
+	 * @type    {String}
+	 */
+	public $raw_excerpt = null;
+
+	/**
+	 * The post content with the filters applied
+	 * @type    {String}
+	 */
+	public $content = null;
+
+	/**
+	 * The post raw content
+	 * @type    {String}
+	 */
+	public $raw_content = null;
+
+	/**
      * Construct the object using the passed wp_post
      * @param    {WP_Post}    $wp_post    The wordpress post object to encapsulate
      */
 	public function __construct($wp_post) {
-		$this->wp_post = $wp_post;
+		$wp_post = (object) $wp_post;
+		$this->id = $wp_post->ID;
+		$this->name = $wp_post->post_name;
+		$this->type = $wp_post->post_type;
+		$this->date = $wp_post->post_date;
+		$this->date_gmt = $wp_post->post_date_gmt;
+		$this->status = $wp_post->post_status;
+		$this->comment_status = $wp_post->comment_status;
+		$this->ping_status = $wp_post->ping_status;
+		$this->password = $wp_post->post_password;
+		$this->parent = $wp_post->post_parent;
+		$this->modified = $wp_post->post_modified;
+		$this->modified_gmt = $wp_post->post_modified_gmt;
+		$this->comment_count = $wp_post->comment_count;
+		$this->menu_order = $wp_post->menu_order;
+		$this->permalink = get_post_permalink($this->id);
+		$this->title = apply_filters('the_title', $wp_post->post_title);
+		$this->raw_title = $wp_post->post_title;
+		$this->excerpt = apply_filters('the_excerpt', $wp_post->post_excerpt);
+		$this->raw_excerpt = $wp_post->post_excerpt;
+		$this->content = apply_filters('the_content', $wp_post->post_content);
+		$this->raw_content = $wp_post->post_content;
 	}
 
 	/**
@@ -30,174 +177,6 @@ class WPS_Post {
 		if (method_exists($this, "get_$property")) {
 			return call_user_func_array([$this, "get_$property"], []);
 		}
-	}
-
-	/**
-	 * Get the post id
-	 * @return    {Integer}    The post id
-	 */
-	public function get_id() {
-		return $this->wp_post->ID;
-	}
-
-	/**
-	 * Get the post name
-	 * @return    {Integer}    The post name
-	 */
-	public function get_name() {
-		return $this->wp_post->post_name;
-	}
-
-	/**
-	 * Get the post type
-	 * @return    {Integer}    The post type
-	 */
-	public function get_type() {
-		return $this->wp_post->post_type;
-	}
-
-	/**
-	 * Get the post date
-	 * @return    {Integer}    The post date
-	 */
-	public function get_date() {
-		return $this->wp_post->post_date;
-	}
-
-	/**
-	 * Get the post data_gmt
-	 * @return    {Integer}    The post data_gmt
-	 */
-	public function get_date_gmt() {
-		return $this->wp_post->post_date_gmt;
-	}
-
-	/**
-	 * Get the post status
-	 * @return    {Integer}    The post status
-	 */
-	public function get_status() {
-		return $this->wp_post->post_status;
-	}
-
-	/**
-	 * Get the post comment_status
-	 * @return    {Integer}    The post comment_status
-	 */
-	public function get_comment_status() {
-		return $this->wp_post->comment_status;
-	}
-
-	/**
-	 * Get the post ping_status
-	 * @return    {Integer}    The post ping_status
-	 */
-	public function get_ping_status() {
-		return $this->wp_post->ping_status;
-	}
-
-	/**
-	 * Get the post password
-	 * @return    {Integer}    The post password
-	 */
-	public function get_password() {
-		return $this->wp_post->post_password;
-	}
-
-	/**
-	 * Get the post parent
-	 * @return    {Integer}    The post parent
-	 */
-	public function get_parent() {
-		return $this->wp_post->post_parent;
-	}
-
-	/**
-	 * Get the post modified
-	 * @return    {Integer}    The post modified
-	 */
-	public function get_modified() {
-		return $this->wp_post->post_modified;
-	}
-
-	/**
-	 * Get the post modified_gmt
-	 * @return    {Integer}    The post modified_gmt
-	 */
-	public function get_modified_gmt() {
-		return $this->wp_post->post_modified_gmt;
-	}
-
-	/**
-	 * Get the post comment_count
-	 * @return    {Integer}    The post comment_count
-	 */
-	public function get_comment_count() {
-		return $this->wp_post->comment_count;
-	}
-
-	/**
-	 * Get the post menu_order
-	 * @return    {Integer}    The post menu_order
-	 */
-	public function get_menu_order() {
-		return $this->wp_post->menu_order;
-	}
-
-	/**
-	 * Get the post permalink
-	 * @return    {String}    The post permalink
-	 */
-	public function get_permalink() {
-		return get_post_permalink($this->wp_post->ID);
-	}
-
-	/**
-	 * Get the post title with the filters applied
-	 * @return    {String}    The post title
-	 */
-	public function get_title() {
-		return apply_filters('the_title', $this->wp_post->post_title);
-	}
-
-	/**
-	 * Get the post raw title
-	 * @return    {String}    The post raw title
-	 */
-	public function get_raw_title() {
-		return $this->wp_post->post_title;
-	}
-
-	/**
-	 * Get the post excerpt with the filters applied
-	 * @return    {String}    The post excerpt
-	 */
-	public function get_excerpt() {
-		return apply_filters('the_excerpt', $this->wp_post->post_excerpt);
-	}
-
-	/**
-	 * Get the post raw excerpt
-	 * @return    {String}    The post raw excerpt
-	 */
-	public function get_raw_excerpt() {
-		return $this->wp_post->post_excerpt;
-	}
-
-	/**
-	 * Get the post content with the filters applied
-	 * @return    {String}    The post content
-	 */
-	public function get_content() {
-		return apply_filters('the_content', $this->wp_post->post_content);
-	}
-
-	/**
-	 * Get the post raw content
-	 * @return    {String}    The post raw content
-	 */
-	public function get_raw_content() {
-		return $this->wp_post->post_content;
 	}
 
 	/**

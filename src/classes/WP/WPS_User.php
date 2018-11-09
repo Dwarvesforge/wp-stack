@@ -13,11 +13,116 @@
 class WPS_User {
 
     /**
+     * The user id
+     * @type    {Integer}
+     */
+    public $id = null;
+
+    /**
+     * The user login
+     * @type    {String}
+     */
+    public $login = null;
+
+    /**
+     * The user password
+     * @type    {String}
+     */
+    public $password = null;
+
+    /**
+     * The user nicename
+     * @type    {String}
+     */
+    public $nicename = null;
+
+    /**
+     * The user email
+     * @type    {String}
+     */
+    public $email = null;
+
+    /**
+     * The user firstname
+     * @type    {String}
+     */
+    public $firstname = null;
+
+    /**
+     * The user lastname
+     * @type    {String}
+     */
+    public $lastname = null;
+
+    /**
+     * The user website url
+     * @type    {String}
+     */
+    public $url = null;
+
+    /**
+     * The user registration datetime
+     * @type    {String}
+     */
+    public $registered = null;
+
+    /**
+     * The user activation key
+     * @type    {String}
+     */
+    public $activation_key = null;
+
+    /**
+     * The user status
+     * @type    {String}
+     */
+    public $status = null;
+
+    /**
+     * The user display name
+     * @type    {String}
+     */
+    public $display_name = null;
+
+    /**
+     * The user capabilities
+     * @type    {Array}
+     */
+    public $capabilities = [];
+
+    /**
+     * All the user capabilities
+     * @type    {Array}
+     */
+    public $all_capabilities = [];
+
+    /**
+     * The user roles
+     * @type    {Array}
+     */
+    public $roles = [];
+
+    /**
      * Construct the object using the passed wp_user
      * @param    {WP_User}    $wp_user    The wordpress user object to encapsulate
      */
     public function __construct($wp_user) {
-        $this->wp_user = $wp_user;
+        // $this->wp_user = $wp_user;
+        $this->id = $wp_user->data->ID;
+        $this->login = $wp_user->data->user_login;
+        $this->password = $wp_user->data->user_pass;
+        $this->nicename = $wp_user->data->user_nicename;
+        $this->email = $wp_user->data->user_email;
+        $this->firstname = $wp_user->first_name;
+        $this->lastname = $wp_user->last_name;
+        $this->url = $wp_user->data->user_url;
+        $this->registered = $wp_user->data->user_registered;
+        $this->activation_key = $wp_user->data->user_activation_key;
+        $this->status = $wp_user->data->user_status;
+        $this->display_name = $wp_user->data->display_name;
+        $this->capabilities = $wp_user->caps;
+        $this->all_capabilities = $wp_user->allcaps;
+        $this->roles = $wp_user->roles;
     }
 
     /**
@@ -28,70 +133,6 @@ class WPS_User {
 			return call_user_func_array([$this, "get_$property"], []);
 		}
     }
-    
-    /**
-     * Get the user id
-     * @return    {Integer}    The user id
-     */
-    public function get_id() {
-        return $this->wp_user->data->ID;
-    }
-
-    /**
-     * Get the user login
-     * @return    {String}    The user login
-     */
-    public function get_login() {
-        return $this->wp_user->data->user_login;
-    }
-
-    /**
-     * Get the user password
-     * @return    {String}    The user password
-     */
-    public function get_password() {
-        return $this->wp_user->data->user_pass;
-    }
-
-    /**
-     * Get the user nicename
-     * @return    {String}    The user nicename
-     */
-    public function get_nicename() {
-        return $this->wp_user->data->user_nicename;
-    }
-
-    /**
-     * Get the user email
-     * @return    {String}    The user email
-     */
-    public function get_email() {
-        return $this->wp_user->data->user_email;
-    }
-
-    /**
-     * Get the user firstname
-     * @return    {String}    The user firstname
-     */
-    public function get_firstname() {
-        return $this->wp_user->first_name;
-    }
-
-    /**
-     * Get the user lastname
-     * @return    {String}    The user lastname
-     */
-    public function get_lastname() {
-        return $this->wp_user->last_name;
-    }
-
-    /**
-     * Get the user url
-     * @return    {String}    The user url. This is the user website url, not the user page url.
-     */
-    public function get_url() {
-        return $this->wp_user->data->user_url;
-    }
 
     /**
      * Get the page url of the author
@@ -99,62 +140,6 @@ class WPS_User {
      */
     public function get_page_url() {
         return get_author_posts_url($this->id);
-    }
-
-    /**
-     * Get the user registered
-     * @return    {String}    The user registered
-     */
-    public function get_registered() {
-        return $this->wp_user->data->user_registered;
-    }
-
-    /**
-     * Get the user activation key
-     * @return    {String}    The user activation_key
-     */
-    public function get_activation_key() {
-        return $this->wp_user->data->user_activation_key;
-    }
-
-    /**
-     * Get the user status
-     * @return    {String}    The user status
-     */
-    public function get_status() {
-        return $this->wp_user->data->user_status;
-    }
-
-    /**
-     * Get the user display name
-     * @return    {String}    The user display_name
-     */
-    public function get_display_name() {
-        return $this->wp_user->data->display_name;
-    }
-
-    /**
-     * Return all the capabilities the user has
-     * @return    [Array]    The user capabilities
-     */
-    public function get_capabilities() {
-        return $this->wp_user->caps;
-    }
-
-    /**
-     * Return all the capabilities the user has
-     * @return    [Array]    The user capabilities
-     */
-    public function get_all_capabilities() {
-        return $this->wp_user->allcaps;
-    }
-
-    /**
-     * Return all the roles the user has
-     * @return    [Array]    The user roles
-     */
-    public function get_roles() {
-        return $this->wp_user->roles;
     }
 
     /**
