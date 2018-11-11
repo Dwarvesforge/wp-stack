@@ -19,5 +19,8 @@ wps_require_folder('categories');
 // comments
 wps_require_folder('comments');
 
+// menus
+wps_require_folder('menus');
+
 // posts
 wps_require_folder('posts');

@@ -19,4 +19,6 @@ require_once 'WP/WPS_Post.php';
 require_once 'WP/WPS_User.php';
 require_once 'WP/WPS_Category.php';
 require_once 'WP/WPS_Comment.php';
+require_once 'WP/WPS_Menu_Item.php';
 require_once 'WP/WPS_ACF_Post.php';
+require_once 'WP/WPS_Query.php';

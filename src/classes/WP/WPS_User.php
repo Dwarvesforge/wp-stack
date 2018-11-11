@@ -107,7 +107,7 @@ class WPS_User {
      * @param    {WP_User}    $wp_user    The wordpress user object to encapsulate
      */
     public function __construct($wp_user) {
-        // $this->wp_user = $wp_user;
+        $this->wp_user = (object) $wp_user;
         $this->id = $wp_user->data->ID;
         $this->login = $wp_user->data->user_login;
         $this->password = $wp_user->data->user_pass;

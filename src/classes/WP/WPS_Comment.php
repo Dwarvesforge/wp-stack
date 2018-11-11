@@ -1,13 +1,98 @@
 <?php
 
+/**
+ * Class that represent a wordpress comment
+ * 
+ * @example    php
+ * $comment = new WPS_Comment($wp_comment);
+ * 
+ * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+ */
 class WPS_Comment {
+
+    /**
+     * The comment id
+     * @type    {Integer}
+     */
+    public $id = null;
+
+    /**
+     * The comment post id
+     * @type    {Integer}
+     */
+    public $post_id = null;
+
+    /**
+     * The comment author ip address
+     * @type    {String}
+     */
+    public $ip = null;
+
+    /**
+     * The comment datetime
+     * @type    {String}
+     */
+    public $date = null;
+
+    /**
+     * The comment date GMT
+     * @type    {String}
+     */
+    public $date_gmt = null;
+
+    /**
+     * The comment content
+     * @type    {String}
+     */
+    public $content = null;
+
+    /**
+     * The comment karma
+     * @type    {Integer}
+     */
+    public $karma = null;
+
+    /**
+     * The comment approved status
+     * @type    {Integer}
+     */
+    public $approved = null;
+
+    /**
+     * The comment author user agent
+     * @type    {String}
+     */
+    public $agent = null;
+
+    /**
+     * The comment type
+     * @type    {String}
+     */
+    public $type = null;
+
+    /**
+     * The comment parent id
+     * @type    {Integer}
+     */
+    public $parent = null;
 
     /**
      * Construct the object using the passed wp_comment
      * @param    {WP_Comment}    $wp_comment    The wordpress comment object to encapsulate
      */
     public function __construct($wp_comment) {
-        $this->wp_comment = $wp_comment;
+        $this->wp_comment = (object) $wp_comment;
+        $this->id = $wp_comment->comment_ID;
+        $this->post_id = $wp_comment->comment_post_ID;
+        $this->ip = $wp_comment->comment_author_IP;
+        $this->date = $wp_comment->comment_date;
+        $this->date_gmt = $wp_comment->comment_date_gmt;
+        $this->content = $wp_comment->comment_content;
+        $this->karma = $wp_comment->comment_karma;
+        $this->approved = $wp_comment->comment_approved;
+        $this->agent = $wp_comment->comment_agent;
+        $this->type = $wp_comment->comment_type;
+        $this->parent = $wp_comment->comment_parent;
     }
 
     /**
@@ -17,94 +102,6 @@ class WPS_Comment {
 		if (method_exists($this, "get_$property")) {
 			return call_user_func_array([$this, "get_$property"], []);
 		}
-    }
-    
-    /**
-     * Get the comment id
-     * @return    {Integer}    The comment id
-     */
-    public function get_id() {
-        return $this->wp_comment->comment_ID;
-    }
-
-    /**
-     * Get the post id
-     * @return    {Integer}    The post id
-     */
-    public function get_post_id() {
-        return $this->wp_comment->comment_post_ID;
-    }
-
-    /**
-     * Get the comment ip address
-     * @return    {String}    The comment ip address
-     */
-    public function get_ip() {
-        return $this->wp_comment->comment_author_IP;
-    }
-
-    /**
-     * Get the comment data
-     * @return    {String}    The comment data
-     */
-    public function get_date() {
-        return $this->wp_comment->comment_date;
-    }
-
-    /**
-     * Get the comment data_gmt
-     * @return    {String}    The comment data_gmt
-     */
-    public function get_data_gmt() {
-        return $this->wp_comment->comment_data_gmt;
-    }
-
-    /**
-     * Get the comment content
-     * @return    {String}    The comment content
-     */
-    public function get_content() {
-        return $this->wp_comment->comment_content;
-    }
-
-    /**
-     * Get the comment karma
-     * @return    {String}    The comment karma
-     */
-    public function get_karma() {
-        return $this->wp_comment->comment_karma;
-    }
-
-    /**
-     * Get the comment approved
-     * @return    {String}    The comment approved
-     */
-    public function get_approved() {
-        return $this->wp_comment->comment_approved;
-    }
-
-    /**
-     * Get the comment agent
-     * @return    {String}    The comment agent
-     */
-    public function get_agent() {
-        return $this->wp_comment->comment_agent;
-    }
-
-    /**
-     * Get the comment type
-     * @return    {String}    The comment type
-     */
-    public function get_type() {
-        return $this->wp_comment->comment_type;
-    }
-
-    /**
-     * Get the comment parent
-     * @return    {String}    The comment parent
-     */
-    public function get_parent() {
-        return $this->wp_comment->comment_parent;
     }
 
     /**

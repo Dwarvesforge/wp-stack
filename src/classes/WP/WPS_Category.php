@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Class that represent a category
+ * 
+ * @example    php
+ * $category = new WPS_Category($wp_term);
+ * 
+ * @author    Olivier Bossel <olivier.bossel@gmail.com>
+ */
 class WPS_Category {
 
     /**
@@ -55,6 +63,7 @@ class WPS_Category {
      * @param    {WP_Term}    $wp_term    The wordpress term object to encapsulate
      */
     public function __construct($wp_term) {
+        $this->wp_term = (object) $wp_term;
         $this->id = $wp_term->cat_ID;
         $this->name = $wp_term->name;
         $this->description = $wp_term->description;

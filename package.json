@@ -1,7 +1,7 @@
 {
   "name": "dwarvesforge-wp-stack",
   "version": "1.0.0",
-  "description": "Wordpress stack that gives you better nice classes as wrapper of the wordpress ones. It also provide a wordpress like api that can be used in template development in order to avoid copy-paste when integrating in a backend theme.",
+  "description": "Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions.",
   "homepage": "https://dwarvesforge.io",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "keywords": [
-    "dwarvesforge",,
+    "dwarvesforge",
     "dwarves",
     "dwarf",
     "wp-stack",
@@ -34,10 +34,8 @@
   ],
   "author": "Coffeekraken <hello@coffeekraken.io>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "coffeekraken-carpenter": "^1.0.0",
     "coffeekraken-docblock-to-markdown": "^1.0.0",
     "concurrently": "^3.1.0",
     "git-changelog": "^1.1.2",

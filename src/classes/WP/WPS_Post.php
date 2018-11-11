@@ -147,6 +147,7 @@ class WPS_Post {
      */
 	public function __construct($wp_post) {
 		$wp_post = (object) $wp_post;
+		$this->wp_post = $wp_post;
 		$this->id = $wp_post->ID;
 		$this->name = $wp_post->post_name;
 		$this->type = $wp_post->post_type;
@@ -192,7 +193,7 @@ class WPS_Post {
 	 * @return    {String}    The post featured image url
 	 */
 	public function get_featured_image_url() {
-		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), 'thumbnail' )[0];
+		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), 'large' )[0];
 	}
 
 	/**
@@ -307,6 +308,56 @@ class WPS_Post {
 			}
 		}
 		return implode($glue, $ar);
+	}
+
+	/**
+	 * Get the post comments
+	 * @param    {Array}    [$args=[]]    The argument to pass to the `get_comments` wordpress function
+	 * @return    {Array<WPS_Comment>}    An array of WPS_Comment object
+	 */
+	public function comments($args = []) {
+		$args = Thorin::extend([
+			'author_email' => '',
+			'author__in' => '',
+			'author__not_in' => '',
+			'include_unapproved' => '',
+			'fields' => '',
+			'ID' => '',
+			'comment__in' => '',
+			'comment__not_in' => '',
+			'karma' => '',
+			'number' => '',
+			'offset' => '',
+			'orderby' => '',
+			'order' => 'DESC',
+			'parent' => '',
+			'post_author__in' => '',
+			'post_author__not_in' => '',
+			'post_id' => $this->id,
+			'post__in' => '',
+			'post__not_in' => '',
+			'post_author' => '',
+			'post_name' => '',
+			'post_parent' => '',
+			'post_status' => '',
+			'post_type' => '',
+			'status' => 'all',
+			'type' => '',
+			'type__in' => '',
+			'type__not_in' => '',
+			'user_id' => '',
+			'search' => '',
+			'count' => false,
+			'meta_key' => '',
+			'meta_value' => '',
+			'meta_query' => '',
+			'date_query' => null, // See WP_Date_Query
+		], $args);
+		$comments = get_comments($args);
+		$comments = array_map(function($comment) {
+			return new WPS_Comment($comment);
+		}, $comments);
+		return $comments;
 	}
 
 	/**
