@@ -28,7 +28,6 @@
         "paquettg/php-html-parser": "^1.7"
     },
     "require-dev": {
-        "dwarvesforge/thorin" : "dev-develop",
         "phpunit/phpunit": "5.2.*"
     },
     "autoload": {
