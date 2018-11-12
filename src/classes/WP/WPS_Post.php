@@ -3,14 +3,14 @@
 /**
  * WP_Post wrapper class.
  * This class wrap a WP_Post object and give them some helpers and some features like `featured_image_url($size)`, accessor like `featured_image_url`, `categories`, `authors`, etc...
- * 
+ *
  * @example    php
  * $post = new WPS_Post($wp_post);
  * $post_id = $post->id;
  * $authors = $post->authors;
  * $featured_image_url = $post->featured_image_url('large');
  * $date = $post->date();
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 class WPS_Post {
@@ -183,6 +183,9 @@ class WPS_Post {
 	/**
 	 * Get the post format
 	 * @return    {String,Boolean}    The post format or false if not specified
+	 *
+	 * @example    php
+	 * $format = $post->format;
 	 */
 	public function get_format() {
 		return get_post_format($this->id);
@@ -191,6 +194,9 @@ class WPS_Post {
 	/**
 	 * Get the post featured image url
 	 * @return    {String}    The post featured image url
+	 *
+	 * @example    php
+	 * $url = $post->featured_image_url;
 	 */
 	public function get_featured_image_url() {
 		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), 'large' )[0];
@@ -200,6 +206,9 @@ class WPS_Post {
 	 * Get the post featured image url
 	 * @param    {String}    [$size="full"]    The size wanted
 	 * @return    {String}    The post featured image url
+	 *
+	 * @example    php
+	 * $url = $post->featured_image_url('full');
 	 */
 	public function featured_image_url($size = 'full') {
 		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), $size )[0];
@@ -208,6 +217,9 @@ class WPS_Post {
 	/**
 	 * Get the post categories
 	 * @return    {Array}    The post categories
+	 *
+	 * @example    php
+	 * $categories = $post->categories;
 	 */
 	public function get_categories() {
 		$ar = [];
@@ -225,6 +237,9 @@ class WPS_Post {
 	 * @param    {String}    [$glue=", "]    The character used to glue together the categories
 	 * @param    {Boolean}    [$link=true]    If want a link around each categories or not
 	 * @return    {String}    The post categories formated
+	 *
+	 * @example    php
+	 * $categories = $post->categories(', ', true);
 	 */
 	public function categories($glue = ', ', $link = true) {
 		$ar = [];
@@ -241,6 +256,9 @@ class WPS_Post {
 	/**
 	 * Get the post authors
 	 * @return    {Array<WPS_User>}    The post authors
+	 *
+	 * @example    php
+	 * $authors = $post->authors;
 	 */
 	public function get_authors() {
 		if (function_exists('get_coauthors')) {
@@ -250,7 +268,7 @@ class WPS_Post {
 			return $authors;
 		} else {
 			return [new WPS_User(get_userdata($this->wp_post->post_author))];
-		}	
+		}
 	}
 
 	/**
@@ -258,6 +276,9 @@ class WPS_Post {
 	 * @param    {String}    [$glue=", "]    The character used to glue together the authors
 	 * @param    {Boolean}    [$link=true]    If want a link around each authors or not
 	 * @return    {String}    The post authors
+	 *
+	 * @example    php
+	 * $authors = $post->authors(', ', true);
 	 */
 	public function authors($glue = ', ', $link = true) {
 		// get authors
@@ -276,6 +297,9 @@ class WPS_Post {
 	/**
 	 * Get the post tags
 	 * @return    {Array}    The post tags
+	 *
+	 * @example    php
+	 * $tags = $post->tags;
 	 */
 	public function get_tags() {
 		$ar = [];
@@ -295,6 +319,9 @@ class WPS_Post {
 	 * @param    {String}    [$glue=", "]    The character used to glue together the tags
 	 * @param    {Boolean}    [$link=true]    If want a link around each tags or not
 	 * @return    {String}    The post tags formated
+	 *
+	 * @example    php
+	 * $tags = $post->tags(', ', true);
 	 */
 	public function tags($glue = ', ', $link = true) {
 		$ar = [];
@@ -312,8 +339,22 @@ class WPS_Post {
 
 	/**
 	 * Get the post comments
+	 * @type    {Array<WP_Comment>}
+	 *
+	 * @example    php
+	 * $comments = $post->comments;
+	 */
+	public function get_comments() {
+		return $this->comments();
+	}
+
+	/**
+	 * Get the post comments
 	 * @param    {Array}    [$args=[]]    The argument to pass to the `get_comments` wordpress function
 	 * @return    {Array<WPS_Comment>}    An array of WPS_Comment object
+	 *
+	 * @example    php
+	 * $comments = $posts->comments();
 	 */
 	public function comments($args = []) {
 		$args = Thorin::extend([
@@ -364,6 +405,9 @@ class WPS_Post {
 	 * Get the post date formated
 	 * @param    {String}    [$format=null]    The format wanted for the date
 	 * @return    {String}    The post data formated
+	 *
+	 * @example    php
+	 * $data = $post->date();
 	 */
 	public function date($format = null) {
 		if ( ! $format) {

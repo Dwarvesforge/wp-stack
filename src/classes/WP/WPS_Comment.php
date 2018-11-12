@@ -2,10 +2,10 @@
 
 /**
  * Class that represent a wordpress comment
- * 
+ *
  * @example    php
  * $comment = new WPS_Comment($wp_comment);
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 class WPS_Comment {
@@ -107,6 +107,9 @@ class WPS_Comment {
     /**
      * Get the post on which this comment has been published
      * @return    {WPS_Post}    A WPS_Post object representing the post on which the comment has been published
+	 *
+	 * @example    php
+	 * $post = $comment->post;
      */
     public function get_post() {
         $post = get_post($this->wp_comment->comment_post_ID);
@@ -116,6 +119,9 @@ class WPS_Comment {
     /**
      * Get the user who post the comment
      * @return    {WPS_User}    A WPS_User object representing the user who post the comment
+	 *
+	 * @example    php
+	 * $author = $comment->author;
      */
     public function get_author() {
         $user = get_userdata($this->wp_comment->user_id);

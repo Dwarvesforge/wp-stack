@@ -3,11 +3,11 @@
 /**
  * WP_User wrapper class.
  * This class wrap a WP_User object and give them some helpers and some features like `get_avatar_url`, accessor like `get_login`, `get_page_url`, etc...
- * 
+ *
  * @example    php
  * $user = new WPS_User($wp_user);
  * $avatarUrl = $user->avatar_url;
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 class WPS_User {
@@ -137,6 +137,9 @@ class WPS_User {
     /**
      * Get the page url of the author
      * @return    {String}    The page url of the author
+	 *
+	 * @example    php
+	 * $pageUrl = $user->page_url;
      */
     public function get_page_url() {
         return get_author_posts_url($this->id);
@@ -145,6 +148,9 @@ class WPS_User {
     /**
      * Get the avatar url for this user
      * @return    {String}    The avatar url
+	 *
+	 * @example    php
+	 * $avatarUrl = $user->avatar_url;
      */
     public function get_avatar_url() {
         return get_avatar_url($this->id);
@@ -152,7 +158,12 @@ class WPS_User {
 
     /**
      * Get the avatar url for this user using some arguments like size
+	 * @param    {Integer}    [$size=96]    The size wanted for the avatar
+	 * @param    {String}    [$default="gravatar_default"]    The default avatar to return if none exists
      * @return    {String}    The avatar url
+	 *
+	 * @example    php
+	 * @avatarUrl = $user->avatar_url(256);
      */
     public function avatar_url($size = 96, $default = 'gravatar_default') {
         return get_avatar_url($this->id, [
