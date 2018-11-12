@@ -262,6 +262,19 @@ Type : **{ [String](http://php.net/manual/en/language.types.string.php) }**
 Default : **null**
 
 
+### get_comments
+
+Get the post comments
+
+Type : **{ Array<WP_Comment> }**
+
+#### Example
+```php
+	$comments = $post->comments;
+```
+**Public**
+
+
 
 ## Public methods
 
@@ -279,6 +292,10 @@ Get the post format
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) , [Boolean](http://php.net/manual/en/language.types.boolean.php) }** The post format or false if not specified
 
+#### Example
+```php
+	$format = $post->format;
+```
 **Public**
 
 
@@ -288,6 +305,10 @@ Get the post featured image url
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post featured image url
 
+#### Example
+```php
+	$url = $post->featured_image_url;
+```
 **Public**
 
 
@@ -303,6 +324,10 @@ $size  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post featured image url
 
+#### Example
+```php
+	$url = $post->featured_image_url('full');
+```
 **Public**
 
 
@@ -312,6 +337,10 @@ Get the post categories
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** The post categories
 
+#### Example
+```php
+	$categories = $post->categories;
+```
 **Public**
 
 
@@ -328,6 +357,10 @@ $link  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post categories formated
 
+#### Example
+```php
+	$categories = $post->categories(', ', true);
+```
 **Public**
 
 
@@ -337,6 +370,10 @@ Get the post authors
 
 Return **{ Array<WPS_User> }** The post authors
 
+#### Example
+```php
+	$authors = $post->authors;
+```
 **Public**
 
 
@@ -353,6 +390,10 @@ $link  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post authors
 
+#### Example
+```php
+	$authors = $post->authors(', ', true);
+```
 **Public**
 
 
@@ -362,6 +403,10 @@ Get the post tags
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** The post tags
 
+#### Example
+```php
+	$tags = $post->tags;
+```
 **Public**
 
 
@@ -378,6 +423,10 @@ $link  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post tags formated
 
+#### Example
+```php
+	$tags = $post->tags(', ', true);
+```
 **Public**
 
 
@@ -393,6 +442,10 @@ $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  | 
 
 Return **{ Array<WPS_Comment> }** An array of WPS_Comment object
 
+#### Example
+```php
+	$comments = $posts->comments();
+```
 **Public**
 
 
@@ -408,6 +461,10 @@ $format  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The post data formated
 
+#### Example
+```php
+	$data = $post->date();
+```
 **Public**
 
 

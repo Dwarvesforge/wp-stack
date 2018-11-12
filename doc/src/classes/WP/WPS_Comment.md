@@ -164,6 +164,10 @@ Get the post on which this comment has been published
 
 Return **{ WPS_Post }** A WPS_Post object representing the post on which the comment has been published
 
+#### Example
+```php
+	$post = $comment->post;
+```
 **Public**
 
 
@@ -173,6 +177,10 @@ Get the user who post the comment
 
 Return **{ WPS_User }** A WPS_User object representing the user who post the comment
 
+#### Example
+```php
+	$author = $comment->author;
+```
 **Public**
 
 

@@ -1,4 +1,4 @@
-# wps_next_posts
+# wps_next_posts_link
 
 Get the next posts link in object format containing the url and the label property.
 

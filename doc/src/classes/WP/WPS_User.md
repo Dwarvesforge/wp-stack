@@ -210,6 +210,10 @@ Get the page url of the author
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The page url of the author
 
+#### Example
+```php
+	$pageUrl = $user->page_url;
+```
 **Public**
 
 
@@ -219,6 +223,10 @@ Get the avatar url for this user
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The avatar url
 
+#### Example
+```php
+	$avatarUrl = $user->avatar_url;
+```
 **Public**
 
 
@@ -226,8 +234,19 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 
 Get the avatar url for this user using some arguments like size
 
+
+#### Parameters
+Name  |  Type  |  Description  |  Status  |  Default
+------------  |  ------------  |  ------------  |  ------------  |  ------------
+$size  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The size wanted for the avatar  |  optional  |  96
+$default  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  The default avatar to return if none exists  |  optional  |  "gravatar_default"
+
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The avatar url
 
+#### Example
+```php
+	undefined
+```
 **Public**
 
 

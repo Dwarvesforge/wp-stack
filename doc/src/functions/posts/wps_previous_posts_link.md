@@ -1,4 +1,4 @@
-# wps_previous_posts
+# wps_previous_posts_link
 
 Get the previous posts link in object format containing the url and the label property.
 
