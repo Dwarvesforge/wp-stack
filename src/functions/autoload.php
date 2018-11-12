@@ -22,5 +22,8 @@ wps_require_folder('comments');
 // menus
 wps_require_folder('menus');
 
+// pagination
+wps_require_folder('pagination');
+
 // posts
 wps_require_folder('posts');
