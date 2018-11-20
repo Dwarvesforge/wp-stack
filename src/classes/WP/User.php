@@ -1,16 +1,18 @@
 <?php
 
+namespace WPS;
+
 /**
  * WP_User wrapper class.
  * This class wrap a WP_User object and give them some helpers and some features like `get_avatar_url`, accessor like `get_login`, `get_page_url`, etc...
  *
  * @example    php
- * $user = new WPS_User($wp_user);
+ * $user = new \WPS\User($wp_user);
  * $avatarUrl = $user->avatar_url;
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-class WPS_User {
+class User {
 
     /**
      * The user id

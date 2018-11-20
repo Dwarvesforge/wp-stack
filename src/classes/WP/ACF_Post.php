@@ -1,20 +1,22 @@
 <?php
 
+namespace WPS;
+
 /**
  * ACF (advanced custom fields) post wrapper class.
  * This class wrap a WP_Post object and give them some of the ACF capabilities like `get_field`, `get_field_object`, `have_rows`, etc...
- * 
+ *
  * @example    php
- * $acfPost = new WPS_ACF_Post($wp_post);
+ * $acfPost = new \WPS\ACF_Post($wp_post);
  * while($acfPost->have_rows('parent_field')) {
  *    $acfPost->the_row();
  *    $field = $acfPost->get_sub_field('sub_field');
  * }
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://www.advancedcustomfields.com/resources/#functions
  */
-class WPS_ACF_Post extends WPS_Post {
+class ACF_Post extends \WPS\Post {
 
     /**
      * Class constructor
@@ -136,7 +138,7 @@ class WPS_ACF_Post extends WPS_Post {
     /**
      * Return an array with the row fields in case the field requested if a repeatable or a flexible one.
      * @param    {String}    $selector    The field name or field key
-     * @return    {Array}    An array with the row fields objects 
+     * @return    {Array}    An array with the row fields objects
      */
     public function get_rows($key) {
         $field_object = $this->get_field_object($key);

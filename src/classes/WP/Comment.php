@@ -1,14 +1,16 @@
 <?php
 
+namespace WPS;
+
 /**
  * Class that represent a wordpress comment
  *
  * @example    php
- * $comment = new WPS_Comment($wp_comment);
+ * $comment = new \WPS\Comment($wp_comment);
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-class WPS_Comment {
+class Comment {
 
     /**
      * The comment id
@@ -113,7 +115,7 @@ class WPS_Comment {
      */
     public function get_post() {
         $post = get_post($this->wp_comment->comment_post_ID);
-        return new WPS_Post($post);
+        return new \WPS\Post($post);
     }
 
     /**
@@ -125,7 +127,7 @@ class WPS_Comment {
      */
     public function get_author() {
         $user = get_userdata($this->wp_comment->user_id);
-        return new WPS_User($user);
+        return new \WPS\User($user);
     }
 
     /**

@@ -1,22 +1,24 @@
 <?php
 
+namespace WPS;
+
 /**
  * Get some recent comments depending on the arguments you've passed.
  * The arguments are the same as the one of `get_comments` wordpress function.
  * This function return an array of WPS_Comment objects.
  * @param    {Array}    [$args=[]]   The arguments to pass to the `get_comments` wordpress function
  * @return    {Array<WPS_Comment>}    Array of WPS_Comment objects
- * 
+ *
  * @example    php
  * $comments = WPS::recent_comments([
  *   'number' => 3
  * ]);
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://codex.wordpress.org/Function_Reference/get_comments
  */
-function wps_recent_comments($args = []) {
-    $args = array(
+function recent_comments($args = []) {
+    $args = \Thorin::col_extend([
         'author_email' => '',
         'author__in' => '',
         'author__not_in' => '',
@@ -52,10 +54,10 @@ function wps_recent_comments($args = []) {
         'meta_value' => '',
         'meta_query' => '',
         'date_query' => null, // See WP_Date_Query
-    );
-    $comments = get_comments( $args );
-    $comments = array_map(function($comment) {
-        return new WPS_Comment($comment);
+	], $args);
+    $comments = \get_comments( $args );
+    $comments = \array_map(function($comment) {
+        return new \WPS\Comment($comment);
     }, $comments);
     return $comments;
 }

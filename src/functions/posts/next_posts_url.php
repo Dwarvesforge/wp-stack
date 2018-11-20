@@ -1,5 +1,7 @@
 <?php
 
+namespace WPS;
+
 /**
  * Get back the next posts url
  *
@@ -8,9 +10,9 @@
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-function wps_next_posts_url() {
+function next_posts_url() {
     // grab next posts object
-    $next = WPS::next_posts_link('');
+    $next = \WPS::next_posts_link('');
     if ( ! $next) return false;
     return $next->url;
 }

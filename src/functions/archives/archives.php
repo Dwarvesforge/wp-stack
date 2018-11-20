@@ -1,4 +1,7 @@
 <?php
+
+namespace WPS;
+
 use PHPHtmlParser\Dom;
 
 /**
@@ -6,17 +9,17 @@ use PHPHtmlParser\Dom;
  * The arguments are the same as the one of the `wp_get_archives` wordpress function.
  * @param    {Array}    [$args=[]]    The arguments to pass to the `wp_get_archives` wordpress function
  * @return    {Array}    An array of simple object containing a url and label properties
- * 
+ *
  * @example    php
  * $links = WPS::archives([
  *   'limit' => 5
  * ]);
- * 
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://developer.wordpress.org/reference/functions/wp_get_archives/
  */
-function wps_archives($args = []) {
-    $args = Thorin::extend([
+function archives($args = []) {
+    $args = \Thorin::col_extend([
         'type' => 'monthly',
         'limit' => '',
         'format' => 'html',
@@ -28,7 +31,7 @@ function wps_archives($args = []) {
         'post_type' => 'post'
     ], $args);
     // get the links from wordpress
-    $links = wp_get_archives($args);
+    $links = \wp_get_archives($args);
     // init the res stack
     $res = [];
     // init a new dom instance
@@ -40,7 +43,7 @@ function wps_archives($args = []) {
     $as = $dom->find('a');
     foreach($as as $a) {
         // add new link in array
-        array_push($res, (object) [
+        \array_push($res, (object) [
             'url' => $a->getAttribute('href'),
             'label' => $a->innerHtml
         ]);

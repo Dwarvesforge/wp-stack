@@ -1,15 +1,17 @@
 <?php
 
+namespace WPS;
+
 /**
  * Class that represent a menu item. You usually don't have to create this by yourself, but
  * by calling functions like `WPS::menu('primary')`.
- * 
+ *
  * @example    php
- * $menuItem = new WPS_Menu_Item($wp_post);
- * 
+ * $menuItem = new \WPS\Menu_Item($wp_post);
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-class WPS_Menu_Item {
+class Menu_Item {
 
     /**
      * The menu item id

@@ -1,14 +1,16 @@
 <?php
 
+namespace WPS;
+
 /**
  * Class that represent a category
- * 
+ *
  * @example    php
- * $category = new WPS_Category($wp_term);
- * 
+ * $category = new \WPS\Category($wp_term);
+ *
  * @author    Olivier Bossel <olivier.bossel@gmail.com>
  */
-class WPS_Category {
+class Category {
 
     /**
      * The category id

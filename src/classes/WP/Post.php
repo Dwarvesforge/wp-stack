@@ -1,11 +1,11 @@
 <?php
 
 /**
- * WP_Post wrapper class.
+ * Post wrapper class.
  * This class wrap a WP_Post object and give them some helpers and some features like `featured_image_url($size)`, accessor like `featured_image_url`, `categories`, `authors`, etc...
  *
  * @example    php
- * $post = new WPS_Post($wp_post);
+ * $post = new \WPS\Post($wp_post);
  * $post_id = $post->id;
  * $authors = $post->authors;
  * $featured_image_url = $post->featured_image_url('large');
@@ -13,7 +13,7 @@
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-class WPS_Post {
+class Post {
 
 	/**
 	 * The post id
@@ -263,11 +263,11 @@ class WPS_Post {
 	public function get_authors() {
 		if (function_exists('get_coauthors')) {
 			$authors = array_map(function($author) {
-				return new WPS_User($author);
+				return new \WPS\User($author);
 			}, get_coauthors($this->wp_post->ID));
 			return $authors;
 		} else {
-			return [new WPS_User(get_userdata($this->wp_post->post_author))];
+			return [new \WPS\User(get_userdata($this->wp_post->post_author))];
 		}
 	}
 
@@ -329,7 +329,7 @@ class WPS_Post {
 		if (!$tags) return $ar;
 		foreach($tags as $tag) {
 			if ($link) {
-				array_push($ar, '<a href="'.get_tag_link($tag->term_id).'" title="' . Thorin::esc_attr($tag->name) . '">'.$tag->name.'</a>');
+				array_push($ar, '<a href="'.get_tag_link($tag->term_id).'" title="' . \Thorin::str_escape_attr($tag->name) . '">'.$tag->name.'</a>');
 			} else {
 				array_push($ar, $tag->name);
 			}
@@ -357,7 +357,7 @@ class WPS_Post {
 	 * $comments = $posts->comments();
 	 */
 	public function comments($args = []) {
-		$args = Thorin::extend([
+		$args = \Thorin::extend([
 			'author_email' => '',
 			'author__in' => '',
 			'author__not_in' => '',
@@ -396,7 +396,7 @@ class WPS_Post {
 		], $args);
 		$comments = get_comments($args);
 		$comments = array_map(function($comment) {
-			return new WPS_Comment($comment);
+			return new \WPS\Comment($comment);
 		}, $comments);
 		return $comments;
 	}
