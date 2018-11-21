@@ -3,10 +3,10 @@
 namespace WPS;
 
 /**
- * Add features image support for your theme
+ * Add featured image support for your theme
  *
  * @example    php
- * WPS::add_features_image_support();
+ * WPS::add_featured_image_support();
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com>
  */

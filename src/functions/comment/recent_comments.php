@@ -7,7 +7,7 @@ namespace WPS;
  * The arguments are the same as the one of `get_comments` wordpress function.
  * This function return an array of WPS_Comment objects.
  * @param    {Array}    [$args=[]]   The arguments to pass to the `get_comments` wordpress function
- * @return    {Array<WPS_Comment>}    Array of WPS_Comment objects
+ * @return    {Array<WPS_Comment>}    Array of WPS\Comment objects
  *
  * @example    php
  * $comments = WPS::recent_comments([

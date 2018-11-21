@@ -5,7 +5,7 @@ namespace WPS;
 /**
  * Retrieve a specific post in \WPS\Post format
  * @param    {Integer}    [$id=null]    The post id to retrieve. If not specified, will take the current post id as input.
- * @return    {WPS_Post}    The post in WPS_Post format
+ * @return    {WPS\Post}    The post in WPS\Post format
  *
  * @example    php
  * $post = WPS::post(10);

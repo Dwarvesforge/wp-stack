@@ -3,7 +3,7 @@
 namespace WPS;
 
 /**
- * Get back the requested menu in object format. Each item is a WPS_Menu_Item object
+ * Get back the requested menu in object format. Each item is a WPS\Menu_Item object
  * that can contains the sub-item depending on the menu structure.
  * This function is very usefull to create simple as well as complexe menu without the
  * weird wordpress menu functions. Here you have the raw menu structured

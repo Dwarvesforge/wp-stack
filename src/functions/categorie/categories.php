@@ -5,7 +5,7 @@ namespace WPS;
 /**
  * Retrieve back the categories of your wordpress installation.
  * @param    {Array}    [$args=[]]    The argument that will be passed to the `get_categories` wordpress function.
- * @return    {Array<WPS_Category>}    An array of WPS_Category objects
+ * @return    {Array<WPS_Category>}    An array of WPS\Category objects
  *
  * @example    php
  * $categories = WPS::categories();

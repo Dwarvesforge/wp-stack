@@ -6,7 +6,7 @@ namespace WPS;
  * Retrieve some posts depending on the args passed.
  * The args are the same as the one passed to the `get_posts` wordpress function.
  * @param    {Array}    [$args=[]]    The arguments to query the posts
- * @return    {Array<WPS_Post>}    An array of WPS_Post objects
+ * @return    {Array<WPS\Post>}    An array of WPS\Post objects
  *
  * @example    php
  * $posts = WPS::posts();

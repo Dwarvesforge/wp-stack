@@ -3,10 +3,10 @@
 namespace WPS;
 
 /**
- * Get a user by id/email and return it in \WPS\User format
+ * Get a user by id/email and return it in WPS\User format
  *
  * @param    {Integer|String}    $id    The id or email of the user to get
- * @return    {\WPS\User}    The user object
+ * @return    {WPS\User}    The user object
  *
  * @example    php
  * $user = Thorin::user(10);

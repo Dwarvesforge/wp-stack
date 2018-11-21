@@ -3,8 +3,8 @@
 namespace WPS;
 
 /**
- * Get the next posts in WPS_Post format
- * @return    {WPS_Post,Boolean}    A WPS_Post instance or false
+ * Get the next posts in WPS\Post format
+ * @return    {WPS\Post,Boolean}    A WPS\Post instance or false
  *
  * @example    php
  * $post = WPS::next_post();

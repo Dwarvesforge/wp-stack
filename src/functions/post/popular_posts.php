@@ -10,10 +10,10 @@ namespace WPS;
  * Simply call the `WPS:count_post_visits()` inside your `functions.php`.
  *
  * @param    {Array}    [$args=[]]    The arguments used to query the posts
- * @return    {Array<WPS_Post>}    An array of WPS_Post objects
+ * @return    {Array<WPS\Post>}    An array of WPS\Post objects
  *
  * @example    php
- * $posts = WPS::posts();
+ * $posts = WPS::popular_posts();
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://codex.wordpress.org/Template_Tags/get_posts

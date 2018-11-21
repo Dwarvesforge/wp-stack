@@ -5,9 +5,9 @@ namespace WPS;
 /**
  * Get some recent posts depending on the arguments you've passed.
  * The arguments are the same as the one of `wp_get_recent_posts` wordpress function.
- * This function return an array of WPS_Post objects.
+ * This function return an array of WPS\Post objects.
  * @param    {Array}    [$args=[]]   The arguments to pass to the `wp_get_recent_posts` wordpress function
- * @return    {Array<WPS_Post>}    Array of WPS_Post objects
+ * @return    {Array<WPS\Post>}    Array of WPS\Post objects
  *
  * @example    php
  * $posts = WPS::recent_posts([
@@ -35,7 +35,7 @@ function recent_posts($args = []) {
     ], $args);
     // get the recent posts
     $recent_posts = \wp_get_recent_posts( $args, ARRAY_A );
-    // create a WPS_Post instance for each posts
+    // create a WPS\Post instance for each posts
     $recent_posts = \array_map(function($post) {
         return new \WPS\Post($post);
     }, $recent_posts);
