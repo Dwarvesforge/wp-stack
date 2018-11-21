@@ -12,7 +12,7 @@
 - [WPS::recent_posts](#WPS_recent_posts)
 <a name="WPS_next_post"></a>
 ## WPS::next_post
-Get the next posts in WPS_Post format
+Get the next posts in WPS\Post format
 ```php
 $post = WPS::next_post();
 ```
@@ -47,7 +47,7 @@ This function need the use of the `WPS::count_post_visits` one to count the time
 Simply call the `WPS:count_post_visits()` inside your `functions.php`.
 
 ```php
-$posts = WPS::posts();
+$posts = WPS::popular_posts();
 ```
 
 [Full documentation](/doc/src/functions/post/popular_posts.md)
@@ -79,7 +79,7 @@ $posts = WPS::posts();
 
 <a name="WPS_previous_post"></a>
 ## WPS::previous_post
-Get the previous posts in WPS_Post format
+Get the previous posts in WPS\Post format
 ```php
 $post = WPS::previous_post();
 ```
@@ -109,7 +109,7 @@ $url = WPS::previous_posts_url();
 ## WPS::recent_posts
 Get some recent posts depending on the arguments you've passed.
 The arguments are the same as the one of `wp_get_recent_posts` wordpress function.
-This function return an array of WPS_Post objects.
+This function return an array of WPS\Post objects.
 ```php
 $posts = WPS::recent_posts([
   'numberposts' => 3

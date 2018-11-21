@@ -1,8 +1,8 @@
 # previous_post
 
-Get the previous posts in WPS_Post format
+Get the previous posts in WPS\Post format
 
-Return **{ WPS_Post , [Boolean](http://php.net/manual/en/language.types.boolean.php) }** A WPS_Post instance or false
+Return **{ WPS\Post , [Boolean](http://php.net/manual/en/language.types.boolean.php) }** A WPS\Post instance or false
 
 ### Example
 ```php

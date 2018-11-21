@@ -13,11 +13,11 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The arguments used to query the posts  |  optional  |  []
 
-Return **{ Array<WPS_Post> }** An array of WPS_Post objects
+Return **{ Array<WPS\Post> }** An array of WPS\Post objects
 
 ### Example
 ```php
-	$posts = WPS::posts();
+	$posts = WPS::popular_posts();
 ```
 Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 

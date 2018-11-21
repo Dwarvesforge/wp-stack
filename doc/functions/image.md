@@ -5,10 +5,10 @@
 - [WPS::make_featured_image_required](#WPS_make_featured_image_required)
 <a name="WPS_add_featured_image_support"></a>
 ## WPS::add_featured_image_support
-Add features image support for your theme
+Add featured image support for your theme
 
 ```php
-WPS::add_features_image_support();
+WPS::add_featured_image_support();
 ```
 
 [Full documentation](/doc/src/functions/image/add_featured_image_support.md)

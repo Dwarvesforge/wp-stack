@@ -1,8 +1,8 @@
 # next_post
 
-Get the next posts in WPS_Post format
+Get the next posts in WPS\Post format
 
-Return **{ WPS_Post , [Boolean](http://php.net/manual/en/language.types.boolean.php) }** A WPS_Post instance or false
+Return **{ WPS\Post , [Boolean](http://php.net/manual/en/language.types.boolean.php) }** A WPS\Post instance or false
 
 ### Example
 ```php

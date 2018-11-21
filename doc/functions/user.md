@@ -4,7 +4,7 @@
 - [WPS::users_count](#WPS_users_count)
 <a name="WPS_user"></a>
 ## WPS::user
-Get a user by id/email and return it in \WPS\User format
+Get a user by id/email and return it in WPS\User format
 
 ```php
 $user = Thorin::user(10);

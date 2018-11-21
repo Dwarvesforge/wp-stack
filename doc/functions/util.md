@@ -3,6 +3,8 @@
 - [WPS::count_post_visits](#WPS_count_post_visits)
 - [WPS::disable_admin_bar](#WPS_disable_admin_bar)
 - [WPS::excerpt_length](#WPS_excerpt_length)
+- [WPS::google_analytics](#WPS_google_analytics)
+- [WPS::google_tag_manager](#WPS_google_tag_manager)
 - [WPS::remove_version](#WPS_remove_version)
 - [WPS::remove_welcome_panel](#WPS_remove_welcome_panel)
 - [WPS::session_start](#WPS_session_start)
@@ -36,6 +38,26 @@ WPS::excerpt_length(200);
 ```
 
 [Full documentation](/doc/src/functions/util/excerpt_length.md)
+
+<a name="WPS_google_analytics"></a>
+## WPS::google_analytics
+Add google analytics
+
+```php
+WPS::google_analytics('xxxxxx');
+```
+
+[Full documentation](/doc/src/functions/util/google_analytics.md)
+
+<a name="WPS_google_tag_manager"></a>
+## WPS::google_tag_manager
+Add google tag manager
+
+```php
+WPS::google_tag_manager('xxxxxx');
+```
+
+[Full documentation](/doc/src/functions/util/google_tag_manager.md)
 
 <a name="WPS_remove_version"></a>
 ## WPS::remove_version

@@ -2,7 +2,7 @@
 
 Get some recent posts depending on the arguments you've passed.
 The arguments are the same as the one of `wp_get_recent_posts` wordpress function.
-This function return an array of WPS_Post objects.
+This function return an array of WPS\Post objects.
 
 
 ### Parameters
@@ -10,7 +10,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The arguments to pass to the `wp_get_recent_posts` wordpress function  |  optional  |  []
 
-Return **{ Array<WPS_Post> }** Array of WPS_Post objects
+Return **{ Array<WPS\Post> }** Array of WPS\Post objects
 
 ### Example
 ```php
