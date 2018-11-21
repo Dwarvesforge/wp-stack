@@ -35,11 +35,14 @@ Wordpress stack that gives you nice classes as wrapper of the wordpress ones as 
 - [Categorie](doc/functions/categorie.md)
 - [Comment](doc/functions/comment.md)
 - [Image](doc/functions/image.md)
+- [Media](doc/functions/media.md)
 - [Menu](doc/functions/menu.md)
 - [Pagination](doc/functions/pagination.md)
 - [Post](doc/functions/post.md)
+- [Search](doc/functions/search.md)
 - [User](doc/functions/user.md)
 - [Util](doc/functions/util.md)
+- [Widget](doc/functions/widget.md)
 - Descriptive classes
 	- [`WPS\ACF_Post`](doc/src/classes/WPS/ACF_Post.md) : class that represent an ACF drived post
 	- [`WPS\Category`](doc/src/classes/WPS/Category.md) : class that represent a category object

@@ -13,7 +13,7 @@ $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  | 
 
 ### Example
 ```php
-	$query = new WPS_Query($myArgs);
+	$query = new \WPS\Query($myArgs);
 while($query->have_posts()) {
     $query->the_post();
     $post = $query->post;
@@ -37,5 +37,11 @@ The arguments are the same as the `WP_Query` ones
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The arguments to pass to the WP_Query class  |  required  |
+
+#### Example
+```php
+	$query = new \WPS\Query($myArgs);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**

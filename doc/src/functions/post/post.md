@@ -8,7 +8,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $id  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The post id to retrieve. If not specified, will take the current post id as input.  |  optional  |  null
 
-Return **{ WPS_Post }** The post in WPS_Post format
+Return **{ WPS\Post }** The post in WPS\Post format
 
 ### Example
 ```php

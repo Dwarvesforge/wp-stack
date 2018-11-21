@@ -51,6 +51,8 @@ $format_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.
 
 Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The field value
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -69,6 +71,8 @@ $load_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.ph
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** An array with the field settings
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -83,6 +87,8 @@ Name  |  Type  |  Description  |  Status  |  Default
 $format_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**  |  Whether to apply formatting to the value  |  optional  |  true
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** An array of values (name => value) for a the post
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -102,6 +108,8 @@ $load_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.ph
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** An array of fields object in key=>value pairs format
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -119,12 +127,17 @@ $key  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if has rows, false if not
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
 ### the_row
 
 Set the current row to work with. This has to be used in conjunction with the have_rows method like the `have_posts` is used with the `the_post` function.
+
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -139,6 +152,8 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $sub_field_name  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  the name of the field to be retrieved. eg “page_content”  |  required  |
 $format_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**  |  whether or not to format the value loaded from the db  |  optional  |  true
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -158,6 +173,8 @@ $load_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.ph
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** An array of the field properties
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -174,12 +191,17 @@ $format_value  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** Return an array containing all sub field values for the current row
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
 ### get_row_index
 
 This function will return the current loop count within a have_rows() loop.
+
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -188,6 +210,9 @@ This function will return the current loop count within a have_rows() loop.
 
 This function returns the current layout (string) within a the_flexible_field() loop. A flexible content field may hold many different layout options which can be placed on a page in any order.
 It is necessary to use this function in your template to decide what code to write and which sub fields to call.
+
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -203,5 +228,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 $selector  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  The field name or field key  |  required  |
 
 Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** An array with the row fields objects
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**

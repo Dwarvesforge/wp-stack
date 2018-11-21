@@ -21,6 +21,12 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $wp_post  |  **{ WP_Post }**  |  The wp_post menu item  |  required  |
 
+#### Example
+```php
+	$wpsMenuItem = new \WPS\Menu_Item($wp_post);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 

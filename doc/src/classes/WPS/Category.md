@@ -20,6 +20,12 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $wp_term  |  **{ WP_Term }**  |  The wordpress term object to encapsulate  |  required  |
 
+#### Example
+```php
+	$wpsCategory = new \WPS\Category($wp_term);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 

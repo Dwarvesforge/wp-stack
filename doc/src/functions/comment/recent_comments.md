@@ -10,7 +10,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The arguments to pass to the `get_comments` wordpress function  |  optional  |  []
 
-Return **{ Array<WPS_Comment> }** Array of WPS_Comment objects
+Return **{ Array<WPS_Comment> }** Array of WPS\Comment objects
 
 ### Example
 ```php

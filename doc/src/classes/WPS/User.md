@@ -22,6 +22,12 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $wp_user  |  **{ WP_User }**  |  The wordpress user object to encapsulate  |  required  |
 
+#### Example
+```php
+	$wpsUser = new \WPS\User($wp_user);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -201,6 +207,9 @@ Default : **[]**
 
 Properties accessor
 
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -214,6 +223,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$pageUrl = $user->page_url;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -227,6 +238,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$avatarUrl = $user->avatar_url;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -245,8 +258,10 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 
 #### Example
 ```php
-	undefined
+	
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -256,6 +271,8 @@ Determine whether the user exists in the database.
 It actually tests !empty(ID), which will normally indicate that the user record was in the database at some stage. It does not access the database.
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if user exists, false otherwise.
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -272,6 +289,8 @@ $key  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |
 
 Return **{ [Mixed](http://php.net/manual/en/language.pseudo-types.php#language.types.mixed) }** String of the property filtered if single value, or array if value is stored as a serialized array
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -287,6 +306,8 @@ $key  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if user has property, false otherwise
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -301,6 +322,8 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $role  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  Role name  |  required  |
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -313,6 +336,8 @@ Remove role from user.
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $role  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  Role name  |  required  |
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -328,6 +353,8 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $role  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  Role name  |  required  |
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -342,6 +369,8 @@ Name  |  Type  |  Description  |  Status  |  Default
 $cap  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  Capability name  |  required  |
 $grant  |  **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }**  |  whether to grant capability to user. Default to true.  |  required  |
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -355,12 +384,17 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $cap  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  Capability name  |  required  |
 
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
 ### remove_all_caps
 
 Remove all of the capabilities of the user.
+
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -376,5 +410,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 $cap  |  **{ [String](http://php.net/manual/en/language.types.string.php) }**  |  capability or role name to search  |  required  |
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if user has capability, false if they do not have the capability
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**

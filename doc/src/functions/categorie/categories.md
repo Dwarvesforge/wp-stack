@@ -8,7 +8,7 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The argument that will be passed to the `get_categories` wordpress function.  |  optional  |  []
 
-Return **{ Array<WPS_Category> }** An array of WPS_Category objects
+Return **{ Array<WPS_Category> }** An array of WPS\Category objects
 
 ### Example
 ```php

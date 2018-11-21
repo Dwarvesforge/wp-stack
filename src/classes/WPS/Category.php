@@ -63,6 +63,11 @@ class Category {
     /**
      * Construct the object using the passed wp_term
      * @param    {WP_Term}    $wp_term    The wordpress term object to encapsulate
+	 *
+	 * @example    php
+	 * $wpsCategory = new \WPS\Category($wp_term);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __construct($wp_term) {
         $this->wp_term = (object) $wp_term;
