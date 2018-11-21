@@ -8,7 +8,6 @@
 - [WPS::remove_version](#WPS_remove_version)
 - [WPS::remove_welcome_panel](#WPS_remove_welcome_panel)
 - [WPS::session_start](#WPS_session_start)
-- [WPS::support_featured_image](#WPS_support_featured_image)
 <a name="WPS_count_post_views"></a>
 ## WPS::count_post_views
 Count the number of views on each posts (pages, etc...).
@@ -89,13 +88,3 @@ WPS::session_start();
 ```
 
 [Full documentation](/doc/src/functions/util/session_start.md)
-
-<a name="WPS_support_featured_image"></a>
-## WPS::support_featured_image
-Add features image support for your theme
-
-```php
-WPS::support_featured_image();
-```
-
-[Full documentation](/doc/src/functions/util/support_featured_image.md)
