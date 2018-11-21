@@ -18,7 +18,7 @@ namespace WPS;
  * @see    https://codex.wordpress.org/Function_Reference/get_comments
  */
 function recent_comments($args = []) {
-    $args = \Thorin::col_extend([
+    $args = \Thorin::extend([
         'author_email' => '',
         'author__in' => '',
         'author__not_in' => '',

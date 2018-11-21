@@ -19,7 +19,7 @@ namespace WPS;
  */
 function recent_posts($args = []) {
     // extend the default args
-    $args = \Thorin::col_extend([
+    $args = \Thorin::extend([
         'numberposts' => 10,
         'offset' => 0,
         'category' => 0,

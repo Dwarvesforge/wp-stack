@@ -22,8 +22,8 @@ use PHPHtmlParser\Dom;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://codex.wordpress.org/Function_Reference/get_the_posts_pagination
  */
-function wps_pagination($args = []) {
-    $args = \Thorin::col_extend([
+function pagination($args = []) {
+    $args = \Thorin::extend([
         'mid_size' => 1,
         'prev_text' => __('Previous'),
         'next_text' => __('Next'),

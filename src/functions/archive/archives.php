@@ -19,7 +19,7 @@ use PHPHtmlParser\Dom;
  * @see    https://developer.wordpress.org/reference/functions/wp_get_archives/
  */
 function archives($args = []) {
-    $args = \Thorin::col_extend([
+    $args = \Thorin::extend([
         'type' => 'monthly',
         'limit' => '',
         'format' => 'html',

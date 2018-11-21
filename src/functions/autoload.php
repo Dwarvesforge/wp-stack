@@ -4,26 +4,35 @@
 function wps_require_folder($folder) {
     foreach (scandir(dirname(__FILE__) . '/' . $folder) as $filename) {
         $path = dirname(__FILE__) . '/' . $folder . '/' . $filename;
-        if (is_file($path)) {
+        if (is_file($path) && $filename !== '.DS_Store') {
             require $path;
         }
     }
 }
 
-// archives
-wps_require_folder('archives');
+// archive
+wps_require_folder('archive');
 
-// categories
-wps_require_folder('categories');
+// categorie
+wps_require_folder('categorie');
 
-// comments
-wps_require_folder('comments');
+// comment
+wps_require_folder('comment');
 
-// menus
-wps_require_folder('menus');
+// image
+wps_require_folder('image');
+
+// menu
+wps_require_folder('menu');
 
 // pagination
 wps_require_folder('pagination');
 
-// posts
-wps_require_folder('posts');
+// post
+wps_require_folder('post');
+
+// user
+wps_require_folder('user');
+
+// util
+wps_require_folder('util');

@@ -1,5 +1,7 @@
 <?php
 
+namespace WPS;
+
 /**
  * Post wrapper class.
  * This class wrap a WP_Post object and give them some helpers and some features like `featured_image_url($size)`, accessor like `featured_image_url`, `categories`, `authors`, etc...

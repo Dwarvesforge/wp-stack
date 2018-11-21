@@ -15,7 +15,7 @@ namespace WPS;
  * @see    https://codex.wordpress.org/Template_Tags/get_posts
  */
 function posts($args = []) {
-    $args = \Thorin::col_extend([
+    $args = \Thorin::extend([
         'posts_per_page'   => 5,
         'offset'           => 0,
         'category'         => '',

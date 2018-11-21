@@ -5,18 +5,18 @@ namespace WPS;
 use PHPHtmlParser\Dom;
 
 /**
- * Get the next posts link in object format containing the url and the label property.
- * @param    {String}    $label    The label wanted for the link
+ * Get the previous posts link in object format containing the url and the label property.
+ * @param    {String}    [$label='']    The label wanted for the link
  *
  * @example    php
- * $nextPosts = WPS::next_posts('Next posts');
+ * $previousPosts = WPS::previous_posts('Previous posts');
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
-function next_posts_link($label) {
-    // generate the next link
+function previous_posts_link($label = '') {
+    // generate the previous link
     ob_start();
-    \next_posts_link($label);
+    \previous_posts_link($label);
     $link = ob_get_clean();
     if (empty($link)) return false;
     // init a new dom instance
