@@ -18,8 +18,8 @@ class WPS {
 	public static function __callStatic($name, $arguments)
 	{
 		// check if function is available in the stack
-		if (function_exists('wps_'.$name)) {
-			return call_user_func_array('wps_'.$name, $arguments);
+		if (is_callable("\\WPS\\$name")) {
+			return call_user_func_array('WPS\\'.$name, $arguments);
 		} else {
 			throw new Exception('Try to call a function "'.$name.'" that does not exist on "WPS"');
 		}
