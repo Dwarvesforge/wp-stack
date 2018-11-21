@@ -22,6 +22,9 @@ wps_require_folder('comment');
 // image
 wps_require_folder('image');
 
+// media
+wps_require_folder('media');
+
 // menu
 wps_require_folder('menu');
 
@@ -31,8 +34,14 @@ wps_require_folder('pagination');
 // post
 wps_require_folder('post');
 
+// search
+wps_require_folder('search');
+
 // user
 wps_require_folder('user');
 
 // util
 wps_require_folder('util');
+
+// widget
+wps_require_folder('widget');
