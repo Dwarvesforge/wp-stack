@@ -29,37 +29,26 @@
 	</a> -->
 </p>
 
-Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions.
+Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions in these areas:
 
-- Archives
-	- [`WPS::archives`](doc/src/functions/archives/wps_archives.md) : get back some archives links in object format depending on arguments you've passed
-- Categories
-	- [`WPS::categories`](doc/src/functions/categories/wps_categories.md) : get back some categories in [`WPS_Category`](doc/src/classes/WP/WPS_Category.md) object format depending on arguments you've passed
-- Comments
-	- [`WPS::recent_comments`](doc/src/functions/comments/wps_recent_comments.md) : get back some comments in [`WPS_Comment`](doc/src/classes/WP/WPS_Comment.md) object format depending on arguments you've passed
-- Menus
-	- [`WPS::menu`](doc/src/functions/menus/wps_menu.md) : get back a menu in [`WPS_Menu_Item`](doc/src/classes/WP/WPS_Menu_Item.md) object format
-- Pagination
-	- [`WPS::pagination`](doc/src/functions/pagination/wps_pagination.md) : get back a pagination in an array of objects format depending on the arguments you've passed
-- Posts
-	- [`WPS::next_post`](doc/src/functions/posts/wps_next_post.md) : get back the next post in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format
-	- [`WPS::next_posts_link`](doc/src/functions/posts/wps_next_posts_link.md) : get back an object of the next posts link. Useful to create paginations
-	- [`WPS::next_posts_url`](doc/src/functions/posts/wps_next_posts_url.md) : get back the url of the next posts. Useful to create paginations
-	- [`WPS::post`](doc/src/functions/posts/wps_post.md) : get back a post in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format depending on post id passed
-	- [`WPS::posts`](doc/src/functions/posts/wps_posts.md) : get back some posts in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format depending on arguments you've passed
-	- [`WPS::previous_post`](doc/src/functions/posts/wps_previous_post.md) : get back the previous post in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format
-	- [`WPS::previous_posts_link`](doc/src/functions/posts/wps_previous_posts_link.md) : get back an object of the previous posts link. Useful to create paginations
-	- [`WPS::previous_posts_url`](doc/src/functions/posts/wps_previous_posts_url.md) : get back the url of the previous posts. Useful to create paginations
-	- [`WPS::recent_posts`](doc/src/functions/posts/wps_recent_posts.md) : get back some recent posts in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format depending on arguments you've passed
+- [Archive](doc/functions/archive.md)
+- [Categorie](doc/functions/categorie.md)
+- [Comment](doc/functions/comment.md)
+- [Image](doc/functions/image.md)
+- [Menu](doc/functions/menu.md)
+- [Pagination](doc/functions/pagination.md)
+- [Post](doc/functions/post.md)
+- [User](doc/functions/user.md)
+- [Util](doc/functions/util.md)
 - Descriptive classes
-	- [`WPS_ACF_Post`](doc/src/classes/WP/WPS_ACF_Post.md) : class that represent an ACF drived post
-	- [`WPS_Category`](doc/src/classes/WP/WPS_Category.md) : class that represent a category object
-	- [`WPS_Comment`](doc/src/classes/WP/WPS_Comment.md) : class that represent a comment object
-	- [`WPS_Menu_Item`](doc/src/classes/WP/WPS_Menu_Item.md) : class that represent a menu item returned by function like [`WPS::menu`](doc/src/functions/menus/wps_menu.md).
-	- [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) : class that represent a post object
-	- [`WPS_User`](doc/src/classes/WP/WPS_User.md) : class that represent a user object
+	- [`WPS\ACF_Post`](doc/src/classes/WPS/ACF_Post.md) : class that represent an ACF drived post
+	- [`WPS\Category`](doc/src/classes/WPS/Category.md) : class that represent a category object
+	- [`WPS\Comment`](doc/src/classes/WPS/Comment.md) : class that represent a comment object
+	- [`WPS\Menu_Item`](doc/src/classes/WPS/Menu_Item.md) : class that represent a menu item returned by function like [`WPS::menu`](doc/src/functions/menu/menu.md).
+	- [`WPS\Post`](doc/src/classes/WPS/Post.md) : class that represent a post object
+	- [`WPS\User`](doc/src/classes/WPS/User.md) : class that represent a user object
 - Usable classes
-	- [`WPS_Query`](doc/src/classes/WP/WPS_Query.md) : same as [`WP_Query`](https://codex.wordpress.org/Class_Reference/WP_Query) but return posts in [`WPS_Post`](doc/src/classes/WP/WPS_Post.md) object format
+	- [`WPS\Query`](doc/src/classes/WPS/Query.md) : same as [`WP_Query`](https://codex.wordpress.org/Class_Reference/WP_Query) but return posts in [`WPS\Post`](doc/src/classes/WPS/Post.md) object format
 
 ## Table of content
 

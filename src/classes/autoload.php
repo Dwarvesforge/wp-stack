@@ -15,10 +15,10 @@ function wps_require_classes_folder($folder) {
 wps_require_classes_folder('core');
 
 // WP
-require_once 'WP/Post.php';
-require_once 'WP/User.php';
-require_once 'WP/Category.php';
-require_once 'WP/Comment.php';
-require_once 'WP/Menu_Item.php';
-require_once 'WP/ACF_Post.php';
-require_once 'WP/Query.php';
+require_once 'WPS/Post.php';
+require_once 'WPS/User.php';
+require_once 'WPS/Category.php';
+require_once 'WPS/Comment.php';
+require_once 'WPS/Menu_Item.php';
+require_once 'WPS/ACF_Post.php';
+require_once 'WPS/Query.php';

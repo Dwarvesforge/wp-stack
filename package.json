@@ -19,8 +19,9 @@
   "scripts": {
     "watch": "npm-watch",
     "start": "concurrently --kill-others \"npm run watch\"",
-    "doc": "rm -rf doc/src && npm run doc.php",
-    "doc.php": "coffeekraken-docblock-to-markdown -f 'src/**/*.php' -d doc",
+    "doc": "rm -rf doc/src && npm run doc:php && npm run doc:functions",
+    "doc:php": "coffeekraken-docblock-to-markdown -f 'src/**/*.php' -d doc",
+    "doc:functions": "node .scripts/functions.js",
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "keywords": [
@@ -36,9 +37,12 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "coffeekraken-docblock-parser": "^1.0.10",
     "coffeekraken-docblock-to-markdown": "^1.0.0",
     "concurrently": "^3.1.0",
     "git-changelog": "^1.1.2",
-    "npm-watch": "0.2.0"
+    "glob-all": "^3.1.0",
+    "npm-watch": "0.2.0",
+    "rimraf": "^2.6.2"
   }
 }
