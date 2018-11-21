@@ -25,6 +25,12 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $wp_post  |  **{ WP_Post }**  |  The wordpress post object to encapsulate  |  required  |
 
+#### Example
+```php
+	$wpsPost = new \WPS\Post($wp_post);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -272,6 +278,8 @@ Type : **{ Array<WP_Comment> }**
 ```php
 	$comments = $post->comments;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -282,6 +290,9 @@ Type : **{ Array<WP_Comment> }**
 ### __get
 
 Properties accessor
+
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -296,6 +307,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) , [Boole
 ```php
 	$format = $post->format;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -309,6 +322,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$url = $post->featured_image_url;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -328,6 +343,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$url = $post->featured_image_url('full');
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -341,6 +358,8 @@ Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** The po
 ```php
 	$categories = $post->categories;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -361,6 +380,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$categories = $post->categories(', ', true);
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -374,6 +395,8 @@ Return **{ Array<WPS_User> }** The post authors
 ```php
 	$authors = $post->authors;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -394,6 +417,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$authors = $post->authors(', ', true);
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -407,6 +432,8 @@ Return **{ [Array](http://php.net/manual/en/language.types.array.php) }** The po
 ```php
 	$tags = $post->tags;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -427,6 +454,8 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 ```php
 	$tags = $post->tags(', ', true);
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -446,6 +475,8 @@ Return **{ Array<WPS_Comment> }** An array of WPS_Comment object
 ```php
 	$comments = $posts->comments();
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -463,8 +494,10 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 
 #### Example
 ```php
-	$data = $post->date();
+	$date = $post->date();
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -473,6 +506,30 @@ Return **{ [String](http://php.net/manual/en/language.types.string.php) }** The 
 Get a meta for this post
 
 Return **{ [Mixed](http://php.net/manual/en/language.pseudo-types.php#language.types.mixed) }** The meta value
+
+#### Example
+```php
+	$viewed_count = $post->meta('post_viewed');
+// 10
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
+**Public**
+
+
+### get_viewed_count
+
+Get the post viewed count
+This need that the `WPS::count_post_views()` to be called inside your `functions.php` file
+
+Return **{ [Integer](http://php.net/manual/en/language.types.integer.php) }** The number of views for this post
+
+#### Example
+```php
+	$post->viewed_count;
+// 10
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -483,6 +540,13 @@ Check if the post is published or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if published, false if not
 
+#### Example
+```php
+	$post->is_published();
+// true
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -491,6 +555,13 @@ Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** tr
 Check if the post is pending or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if pending, false if not
+
+#### Example
+```php
+	$post->is_pending();
+// false
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -501,6 +572,13 @@ Check if the post is in draft or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if draft, false if not
 
+#### Example
+```php
+	$post->is_draft();
+// false
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -509,6 +587,13 @@ Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** tr
 Check if the post is private or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if private, false if not
+
+#### Example
+```php
+	$post->is_private()
+// false
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**
 
@@ -519,6 +604,13 @@ Check if the post is sticky or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if sticky, false if not
 
+#### Example
+```php
+	$post->is_sticky();
+// true
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -527,5 +619,12 @@ Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** tr
 Check if the post is password protected or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if password protected, false if not
+
+#### Example
+```php
+	$post->is_password_protected();
+// false
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**

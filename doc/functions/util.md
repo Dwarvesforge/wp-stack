@@ -1,6 +1,6 @@
 # util
 
-- [WPS::count_post_visits](#WPS_count_post_visits)
+- [WPS::count_post_views](#WPS_count_post_views)
 - [WPS::disable_admin_bar](#WPS_disable_admin_bar)
 - [WPS::excerpt_length](#WPS_excerpt_length)
 - [WPS::google_analytics](#WPS_google_analytics)
@@ -8,16 +8,17 @@
 - [WPS::remove_version](#WPS_remove_version)
 - [WPS::remove_welcome_panel](#WPS_remove_welcome_panel)
 - [WPS::session_start](#WPS_session_start)
-<a name="WPS_count_post_visits"></a>
-## WPS::count_post_visits
-Count the number of visits on each posts (pages, etc...).
-This function will add and maintain a post meta value called `post_visits` that you can use later for to make queries.
+- [WPS::support_featured_image](#WPS_support_featured_image)
+<a name="WPS_count_post_views"></a>
+## WPS::count_post_views
+Count the number of views on each posts (pages, etc...).
+This function will add and maintain a post meta value called `post_viewed` that you can use later for to make queries.
 
 ```php
-WPS::count_post_visits();
+WPS::count_post_views();
 ```
 
-[Full documentation](/doc/src/functions/util/count_post_visits.md)
+[Full documentation](/doc/src/functions/util/count_post_views.md)
 
 <a name="WPS_disable_admin_bar"></a>
 ## WPS::disable_admin_bar
@@ -88,3 +89,13 @@ WPS::session_start();
 ```
 
 [Full documentation](/doc/src/functions/util/session_start.md)
+
+<a name="WPS_support_featured_image"></a>
+## WPS::support_featured_image
+Add features image support for your theme
+
+```php
+WPS::support_featured_image();
+```
+
+[Full documentation](/doc/src/functions/util/support_featured_image.md)

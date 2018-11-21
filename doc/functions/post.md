@@ -43,11 +43,11 @@ $url = WPS::next_posts_url();
 Retrieve some popular posts depending on the args passed.
 The args are the same as the one passed to the `get_posts` wordpress function.
 
-This function need the use of the `WPS::count_post_visits` one to count the times a post is viewed.
-Simply call the `WPS:count_post_visits()` inside your `functions.php`.
+This function need the use of the `WPS::count_post_views` one to count the times a post is viewed.
+Simply call the `WPS:count_post_views()` inside your `functions.php`.
 
 ```php
-$posts = WPS::popular_posts();
+$posts = WPS::popular_posts(3);
 ```
 
 [Full documentation](/doc/src/functions/post/popular_posts.md)

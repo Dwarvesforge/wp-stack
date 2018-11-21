@@ -20,6 +20,12 @@ Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $wp_comment  |  **{ WP_Comment }**  |  The wordpress comment object to encapsulate  |  required  |
 
+#### Example
+```php
+	$wpsComment = new \WPS\Comment($wp_comment);
+```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
