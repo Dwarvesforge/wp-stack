@@ -146,6 +146,11 @@ class Post {
 	/**
      * Construct the object using the passed wp_post
      * @param    {WP_Post}    $wp_post    The wordpress post object to encapsulate
+	 *
+	 * @example    php
+	 * $wpsPost = new \WPS\Post($wp_post);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
 	public function __construct($wp_post) {
 		$wp_post = (object) $wp_post;
@@ -175,6 +180,8 @@ class Post {
 
 	/**
      * Properties accessor
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
 	public function __get($property) {
 		if (method_exists($this, "get_$property")) {
@@ -188,6 +195,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $format = $post->format;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_format() {
 		return get_post_format($this->id);
@@ -199,6 +208,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $url = $post->featured_image_url;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_featured_image_url() {
 		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), 'large' )[0];
@@ -211,6 +222,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $url = $post->featured_image_url('full');
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function featured_image_url($size = 'full') {
 		return wp_get_attachment_image_src( get_post_thumbnail_id( $this->wp_post->ID ), $size )[0];
@@ -222,6 +235,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $categories = $post->categories;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_categories() {
 		$ar = [];
@@ -242,12 +257,14 @@ class Post {
 	 *
 	 * @example    php
 	 * $categories = $post->categories(', ', true);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function categories($glue = ', ', $link = true) {
 		$ar = [];
 		foreach(get_the_category($this->wp_post->ID) as $categorie) {
 			if ($link) {
-				array_push($ar, '<a href="'.get_category_link($categorie->cat_ID).'" title="' . Thorin::esc_attr($this->title) . '">'.$categorie->name.'</a>');
+				array_push($ar, '<a href="'.get_category_link($categorie->cat_ID).'" title="' . \Thorin::str_escape_attr($this->title) . '">'.$categorie->name.'</a>');
 			} else {
 				array_push($ar, $categorie->name);
 			}
@@ -261,6 +278,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $authors = $post->authors;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_authors() {
 		if (function_exists('get_coauthors')) {
@@ -281,6 +300,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $authors = $post->authors(', ', true);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function authors($glue = ', ', $link = true) {
 		// get authors
@@ -288,7 +309,7 @@ class Post {
 		$ar = [];
 		foreach($authors as $author) {
 			if ($link) {
-				array_push($ar, '<a href="'.get_author_posts_url($author->ID).'" title="' . Thorin::esc_attr($author->data->display_name) . '">'.$author->data->display_name.'</a>');
+				array_push($ar, '<a href="'.get_author_posts_url($author->ID).'" title="' . \Thorin::str_escape_attr($author->data->display_name) . '">'.$author->data->display_name.'</a>');
 			} else {
 				array_push($ar, $author->data->display_name);
 			}
@@ -302,6 +323,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $tags = $post->tags;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_tags() {
 		$ar = [];
@@ -324,6 +347,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $tags = $post->tags(', ', true);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function tags($glue = ', ', $link = true) {
 		$ar = [];
@@ -345,6 +370,8 @@ class Post {
 	 *
 	 * @example    php
 	 * $comments = $post->comments;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function get_comments() {
 		return $this->comments();
@@ -357,50 +384,11 @@ class Post {
 	 *
 	 * @example    php
 	 * $comments = $posts->comments();
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function comments($args = []) {
-		$args = \Thorin::extend([
-			'author_email' => '',
-			'author__in' => '',
-			'author__not_in' => '',
-			'include_unapproved' => '',
-			'fields' => '',
-			'ID' => '',
-			'comment__in' => '',
-			'comment__not_in' => '',
-			'karma' => '',
-			'number' => '',
-			'offset' => '',
-			'orderby' => '',
-			'order' => 'DESC',
-			'parent' => '',
-			'post_author__in' => '',
-			'post_author__not_in' => '',
-			'post_id' => $this->id,
-			'post__in' => '',
-			'post__not_in' => '',
-			'post_author' => '',
-			'post_name' => '',
-			'post_parent' => '',
-			'post_status' => '',
-			'post_type' => '',
-			'status' => 'all',
-			'type' => '',
-			'type__in' => '',
-			'type__not_in' => '',
-			'user_id' => '',
-			'search' => '',
-			'count' => false,
-			'meta_key' => '',
-			'meta_value' => '',
-			'meta_query' => '',
-			'date_query' => null, // See WP_Date_Query
-		], $args);
-		$comments = get_comments($args);
-		$comments = array_map(function($comment) {
-			return new \WPS\Comment($comment);
-		}, $comments);
-		return $comments;
+		return \WPS::comments($this->id, $args);
 	}
 
 	/**
@@ -409,7 +397,9 @@ class Post {
 	 * @return    {String}    The post data formated
 	 *
 	 * @example    php
-	 * $data = $post->date();
+	 * $date = $post->date();
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function date($format = null) {
 		if ( ! $format) {
@@ -421,14 +411,41 @@ class Post {
 	/**
 	 * Get a meta for this post
 	 * @return    {Mixed}    The meta value
+	 *
+	 * @example    php
+	 * $viewed_count = $post->meta('post_viewed');
+	 * // 10
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function meta($key) {
 		return get_post_meta($this->id, $key, true);
 	}
 
 	/**
+	 * Get the post viewed count
+	 * This need that the `WPS::count_post_views()` to be called inside your `functions.php` file
+	 * @return    {Integer}    The number of views for this post
+	 *
+	 * @example    php
+	 * $post->viewed_count;
+	 * // 10
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
+	 */
+	public function get_viewed_count() {
+		return $this->meta('post_viewed');
+	}
+
+	/**
 	 * Check if the post is published or not
 	 * @return    {Boolean}    true if published, false if not
+	 *
+	 * @example
+	 * $post->is_published();
+	 * // true
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_published() {
 		return $this->status === 'publish';
@@ -437,6 +454,12 @@ class Post {
 	/**
 	 * Check if the post is pending or not
 	 * @return    {Boolean}    true if pending, false if not
+	 *
+	 * @example    php
+	 * $post->is_pending();
+	 * // false
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_pending() {
 		return $this->status === 'pending';
@@ -445,6 +468,12 @@ class Post {
 	/**
 	 * Check if the post is in draft or not
 	 * @return    {Boolean}    true if draft, false if not
+	 *
+	 * @example    php
+	 * $post->is_draft();
+	 * // false
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_draft() {
 		return $this->status === 'draft';
@@ -453,6 +482,12 @@ class Post {
 	/**
 	 * Check if the post is private or not
 	 * @return    {Boolean}    true if private, false if not
+	 *
+	 * @example    php
+	 * $post->is_private()
+	 * // false
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_private() {
 		return $this->status === 'private';
@@ -461,6 +496,12 @@ class Post {
 	/**
 	 * Check if the post is sticky or not
 	 * @return    {Boolean}    true if sticky, false if not
+	 *
+	 * @example    php
+	 * $post->is_sticky();
+	 * // true
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_sticky() {
 		return is_sticky($this->id);
@@ -469,6 +510,12 @@ class Post {
 	/**
 	 * Check if the post is password protected or not
 	 * @return    {Boolean}    true if password protected, false if not
+	 *
+	 * @example    php
+	 * $post->is_password_protected();
+	 * // false
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function is_password_protected() {
 		return $this->password !== '';

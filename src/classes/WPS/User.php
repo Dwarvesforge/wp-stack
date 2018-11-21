@@ -107,6 +107,11 @@ class User {
     /**
      * Construct the object using the passed wp_user
      * @param    {WP_User}    $wp_user    The wordpress user object to encapsulate
+	 *
+	 * @example    php
+	 * $wpsUser = new \WPS\User($wp_user);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __construct($wp_user) {
         $this->wp_user = (object) $wp_user;
@@ -129,6 +134,8 @@ class User {
 
     /**
      * Properties accessor
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __get($property) {
 		if (method_exists($this, "get_$property")) {
@@ -142,6 +149,8 @@ class User {
 	 *
 	 * @example    php
 	 * $pageUrl = $user->page_url;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_page_url() {
         return get_author_posts_url($this->id);
@@ -153,6 +162,8 @@ class User {
 	 *
 	 * @example    php
 	 * $avatarUrl = $user->avatar_url;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_avatar_url() {
         return get_avatar_url($this->id);
@@ -166,6 +177,8 @@ class User {
 	 *
 	 * @example    php
 	 * @avatarUrl = $user->avatar_url(256);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function avatar_url($size = 96, $default = 'gravatar_default') {
         return get_avatar_url($this->id, [
@@ -178,6 +191,8 @@ class User {
      * Determine whether the user exists in the database.
      * It actually tests !empty(ID), which will normally indicate that the user record was in the database at some stage. It does not access the database.
      * @return    {Boolean}    true if user exists, false otherwise.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function exists() {
         return $this->wp_user->exists();
@@ -187,6 +202,8 @@ class User {
      * Retrieve the value of a property or meta key from the users and usermeta tables.
      * @param    {String}    $key    property
      * @return   {Mixed}    String of the property filtered if single value, or array if value is stored as a serialized array
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get($key) {
         return $this->wp_user->get($key);
@@ -196,6 +213,8 @@ class User {
      * Determine whether a property or meta key is set from the users and usermeta tables.
      * @param    {String}    $key    property
      * @return    {Boolean}    true if user has property, false otherwise
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function has_prop($key) {
         return $this->wp_user->has_prop($key);
@@ -205,6 +224,8 @@ class User {
      * Add role to user.
      * Updates the user's meta data option with capabilities and roles.
      * @param    {String}    $role    Role name
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function add_role($role) {
         return $this->wp_user->add_role($role);
@@ -213,6 +234,8 @@ class User {
     /**
      * Remove role from user.
      * @param    {String}    $role    Role name
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function remove_role($role) {
         return $this->wp_user->remove_role($role);
@@ -222,6 +245,8 @@ class User {
      * Set the role of the user.
      * This will remove the previous roles of the user and assign the user the new one. You can set the role to an empty string and it will remove all of the roles from the user.
      * @param    {String}    $role    Role name
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function set_role($role) {
         return $this->wp_user->set_role($role);
@@ -231,6 +256,8 @@ class User {
      * Add capability and grant or deny access to capability.
      * @param    {String}    $cap    Capability name
      * @param    {Boolean}    $grant    whether to grant capability to user. Default to true.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function add_cap($cap, $grant = true) {
         return $this->wp_user->add_cap($cap, $grant);
@@ -239,6 +266,8 @@ class User {
     /**
      * Remove capability from user
      * @param    {String}    $cap    Capability name
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function remove_cap($cap) {
         return $this->wp_user->remove_cap($cap);
@@ -246,6 +275,8 @@ class User {
 
     /**
      * Remove all of the capabilities of the user.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function remove_all_caps() {
         return $this->wp_user->remove_all_caps();
@@ -255,6 +286,8 @@ class User {
      * Whether user has capability or role name.
      * @param    {String}    $cap    capability or role name to search
      * @return    {Boolean}    true if user has capability, false if they do not have the capability
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function has_cap($cap) {
         return $this->wp_user->has_cap($cap);

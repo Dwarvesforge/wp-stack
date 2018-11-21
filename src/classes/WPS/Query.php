@@ -10,7 +10,7 @@ namespace WPS;
  * @param    {Array}    $args    The arguments to pass to the WP_Query constructor
  *
  * @example    php
- * $query = new WPS_Query($myArgs);
+ * $query = new \WPS\Query($myArgs);
  * while($query->have_posts()) {
  *     $query->the_post();
  *     $post = $query->post;
@@ -26,6 +26,11 @@ class Query extends \WP_Query {
      * Construct the WPS_Query with some arguments.
      * The arguments are the same as the `WP_Query` ones
      * @param    {Array}    $args    The arguments to pass to the WP_Query class
+	 *
+	 * @example    php
+	 * $query = new \WPS\Query($myArgs);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __construct($args) {
         parent::__construct($args);

@@ -33,6 +33,8 @@ class ACF_Post extends \WPS\Post {
      * @param    {String}    $key    The field key to get
      * @param    {Boolean}    [$format_value=true]    Whether to apply formatting logic
      * @return    {String}    The field value
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_field($key, $format_value = true) {
         return get_field($key, $this->id, $format_value);
@@ -45,6 +47,8 @@ class ACF_Post extends \WPS\Post {
      * @param    {Boolean}    [$format_value=true]    Whether to apply formatting logic
      * @param    {Boolean}    [$load_value=true]    Whether to load the field’s value
      * @return    {Array}    An array with the field settings
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_field_object($key, $format_value = true, $load_value = true) {
         return get_field_object($key, $this->id, $format_value, $load_value);
@@ -54,6 +58,8 @@ class ACF_Post extends \WPS\Post {
      * Returns an array of values (name => value) for a the post.
      * @param    {Boolean}    [$format_value=true]    Whether to apply formatting to the value
      * @return    {Array}    An array of values (name => value) for a the post
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_fields($format_value = true) {
         return get_fields($this->id, $format_value);
@@ -66,6 +72,8 @@ class ACF_Post extends \WPS\Post {
      * @param    {Boolean}    [$format_value=true]    Whether to apply formatting logic
      * @param    {Boolean}    [$load_value=true]    Whether to load the field’s value
      * @return    {Array}    An array of fields object in key=>value pairs format
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_field_objects($format_value = true, $load_value = true) {
         return get_field_objects($this->id, $format_value, $load_value);
@@ -77,6 +85,8 @@ class ACF_Post extends \WPS\Post {
      * Using `have_rows()` together with `the_row()` is intended to feel native much like the `have_posts()` and `the_post()` WordPress functions.
      * @param    {String}    $key    The field key to get
      * @return    {Boolean}    true if has rows, false if not
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function have_rows($key) {
         return have_rows($key, $this->id);
@@ -84,6 +94,8 @@ class ACF_Post extends \WPS\Post {
 
     /**
      * Set the current row to work with. This has to be used in conjunction with the have_rows method like the `have_posts` is used with the `the_post` function.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function the_row() {
         the_row();
@@ -93,6 +105,8 @@ class ACF_Post extends \WPS\Post {
      * Returns the value of a specific sub field.
      * @param    {String}    $sub_field_name    the name of the field to be retrieved. eg “page_content”
      * @param    {Boolean}    [$format_value=true]    whether or not to format the value loaded from the db
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_sub_field($sub_field_name, $format_value = true) {
         return get_sub_field($sub_field_name, $format_value);
@@ -105,6 +119,8 @@ class ACF_Post extends \WPS\Post {
      * @param    {Boolean}    [$format_value=true]    Whether to apply formatting logic
      * @param    {Boolean}    [$load_value=true]    Whether to load the field’s value
      * @return    {Array}    An array of the field properties
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_sub_field_object($selector, $format_value = true, $load_value = true) {
         return get_sub_field_object($selector, $format_value, $load_value);
@@ -115,6 +131,8 @@ class ACF_Post extends \WPS\Post {
      * This function will return an array containing all sub field values for the current row within a have_rows() loop.
      * @param    {Boolean}    [$format_value=true]     whether or not to format the value loaded from the db
      * @return    {Array}    Return an array containing all sub field values for the current row
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_row($format_value = true) {
         return get_row($format_value);
@@ -122,6 +140,8 @@ class ACF_Post extends \WPS\Post {
 
     /**
      * This function will return the current loop count within a have_rows() loop.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_row_index() {
         return get_row_index();
@@ -130,6 +150,8 @@ class ACF_Post extends \WPS\Post {
     /**
      * This function returns the current layout (string) within a the_flexible_field() loop. A flexible content field may hold many different layout options which can be placed on a page in any order.
      * It is necessary to use this function in your template to decide what code to write and which sub fields to call.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_row_layout() {
         return get_row_layout();
@@ -139,6 +161,8 @@ class ACF_Post extends \WPS\Post {
      * Return an array with the row fields in case the field requested if a repeatable or a flexible one.
      * @param    {String}    $selector    The field name or field key
      * @return    {Array}    An array with the row fields objects
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_rows($key) {
         $field_object = $this->get_field_object($key);
@@ -151,6 +175,8 @@ class ACF_Post extends \WPS\Post {
 
     /**
      * Make sure that ACF is installed. Otherwise, throw an error.
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     private function check_acf_installation() {
         if ( ! function_exists('get_field_object')) {

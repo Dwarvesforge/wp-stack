@@ -64,6 +64,11 @@ class Menu_Item {
     /**
      * Construct the object using the wp_post passed menu item
      * @param    {WP_Post}    $wp_post    The wp_post menu item
+	 *
+	 * @example    php
+	 * $wpsMenuItem = new \WPS\Menu_Item($wp_post);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __construct($wp_post) {
         $this->wp_post = $wp_post;

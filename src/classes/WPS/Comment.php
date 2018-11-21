@@ -81,6 +81,11 @@ class Comment {
     /**
      * Construct the object using the passed wp_comment
      * @param    {WP_Comment}    $wp_comment    The wordpress comment object to encapsulate
+	 *
+	 * @example    php
+	 * $wpsComment = new \WPS\Comment($wp_comment);
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function __construct($wp_comment) {
         $this->wp_comment = (object) $wp_comment;
