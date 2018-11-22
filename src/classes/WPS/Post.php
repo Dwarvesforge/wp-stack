@@ -388,7 +388,9 @@ class Post {
 	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
 	 */
 	public function comments($args = []) {
-		return \WPS::comments($this->id, $args);
+		return \WPS::comments(\Thorin::extend([
+			'post_id' => $this->id
+		], $args));
 	}
 
 	/**

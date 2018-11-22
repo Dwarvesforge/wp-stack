@@ -7,22 +7,16 @@ namespace WPS;
  * The arguments are the same as the one of `get_comments` wordpress function.
  * This function return an array of \WPS\Comment objects.
  *
- * @param    {Integer}    [$post_id=null]    The post id to fetch the comments for
  * @param    {Array}    [$args=[]]   The arguments to pass to the `get_comments` wordpress function
  * @return    {Array<WPS\Comment>}    Array of WPS\Comment objects
  *
  * @example    php
- * $comments = WPS::comments(10);
+ * $comments = WPS::comments();
  *
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  * @see    https://codex.wordpress.org/Function_Reference/get_comments
  */
-function comments($post_id = null, $args = []) {
-	global $post;
-	if (!$post_id) {
-		$post_id = $post->ID;
-	}
-
+function comments($args = []) {
     $args = \Thorin::extend([
         'author_email' => '',
         'author__in' => '',
@@ -40,7 +34,7 @@ function comments($post_id = null, $args = []) {
         'parent' => '',
         'post_author__in' => '',
         'post_author__not_in' => '',
-        'post_id' => $post_id,
+        'post_id' => '',
         'post__in' => '',
         'post__not_in' => '',
         'post_author' => '',
