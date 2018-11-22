@@ -9,14 +9,13 @@ This function return an array of \WPS\Comment objects.
 ### Parameters
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
-$post_id  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The post id to fetch the comments for  |  optional  |  null
 $args  |  **{ [Array](http://php.net/manual/en/language.types.array.php) }**  |  The arguments to pass to the `get_comments` wordpress function  |  optional  |  []
 
 Return **{ Array<WPS\Comment> }** Array of WPS\Comment objects
 
 ### Example
 ```php
-	$comments = WPS::comments(10);
+	$comments = WPS::comments();
 ```
 Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 

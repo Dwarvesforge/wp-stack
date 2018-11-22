@@ -20,7 +20,7 @@ The arguments are the same as the one of `get_comments` wordpress function.
 This function return an array of \WPS\Comment objects.
 
 ```php
-$comments = WPS::comments(10);
+$comments = WPS::comments();
 ```
 
 [Full documentation](/doc/src/functions/comment/comments.md)

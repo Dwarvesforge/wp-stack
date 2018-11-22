@@ -18,46 +18,11 @@ namespace WPS;
  * @see    https://codex.wordpress.org/Function_Reference/get_comments
  */
 function recent_comments($args = []) {
-    $args = \Thorin::extend([
-        'author_email' => '',
-        'author__in' => '',
-        'author__not_in' => '',
-        'include_unapproved' => '',
-        'fields' => '',
-        'ID' => '',
-        'comment__in' => '',
-        'comment__not_in' => '',
-        'karma' => '',
-        'number' => 3,
-        'offset' => '',
-        'orderby' => 'comment_date',
-        'order' => 'DESC',
-        'parent' => '',
-        'post_author__in' => '',
-        'post_author__not_in' => '',
-        'post_id' => '',
-        'post__in' => '',
-        'post__not_in' => '',
-        'post_author' => '',
-        'post_name' => '',
-        'post_parent' => '',
-        'post_status' => '',
-        'post_type' => '',
-        'status' => 'approve',
-        'type' => '',
-        'type__in' => '',
-        'type__not_in' => '',
-        'user_id' => '',
-        'search' => '',
-        'count' => false,
-        'meta_key' => '',
-        'meta_value' => '',
-        'meta_query' => '',
-        'date_query' => null, // See WP_Date_Query
-	], $args);
-    $comments = \get_comments( $args );
-    $comments = \array_map(function($comment) {
-        return new \WPS\Comment($comment);
-    }, $comments);
-    return $comments;
+	return \WPS::comments(\Thorin::extend([
+		'number' => 3,
+		'orderby' => 'comment_date',
+		'order' => 'DESC',
+		'status' => 'approve',
+		'count' => false
+	], $args));
 }
