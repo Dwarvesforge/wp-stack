@@ -31,6 +31,7 @@
 
 Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions in these areas:
 
+- [Admin](doc/functions/admin.md)
 - [Archive](doc/functions/archive.md)
 - [Categorie](doc/functions/categorie.md)
 - [Comment](doc/functions/comment.md)
