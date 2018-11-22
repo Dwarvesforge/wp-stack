@@ -10,6 +10,9 @@ function wps_require_folder($folder) {
     }
 }
 
+// admin
+wps_require_folder('admin');
+
 // archive
 wps_require_folder('archive');
 
