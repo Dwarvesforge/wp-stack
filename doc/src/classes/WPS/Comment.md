@@ -161,6 +161,9 @@ Default : **null**
 
 Properties accessor
 
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -174,6 +177,8 @@ Return **{ WPS_Post }** A WPS_Post object representing the post on which the com
 ```php
 	$post = $comment->post;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -187,6 +192,8 @@ Return **{ WPS_User }** A WPS_User object representing the user who post the com
 ```php
 	$author = $comment->author;
 ```
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
+
 **Public**
 
 
@@ -195,5 +202,7 @@ Return **{ WPS_User }** A WPS_User object representing the user who post the com
 Check if the comment is approved or not
 
 Return **{ [Boolean](http://php.net/manual/en/language.types.boolean.php) }** true if approved, false if not
+
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)
 
 **Public**

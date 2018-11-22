@@ -104,6 +104,8 @@ class Comment {
 
     /**
      * Properties accessor
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
 	public function __get($property) {
 		if (method_exists($this, "get_$property")) {
@@ -117,6 +119,8 @@ class Comment {
 	 *
 	 * @example    php
 	 * $post = $comment->post;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_post() {
         $post = get_post($this->wp_comment->comment_post_ID);
@@ -129,6 +133,8 @@ class Comment {
 	 *
 	 * @example    php
 	 * $author = $comment->author;
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function get_author() {
         $user = get_userdata($this->wp_comment->user_id);
@@ -138,6 +144,8 @@ class Comment {
     /**
      * Check if the comment is approved or not
      * @return    {Boolean}    true if approved, false if not
+	 *
+	 * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
      */
     public function is_approved() {
         return $this->approved === '1';
