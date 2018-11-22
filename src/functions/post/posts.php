@@ -16,7 +16,7 @@ namespace WPS;
  */
 function posts($args = []) {
     $args = \Thorin::extend([
-        'posts_per_page'   => 5,
+        'posts_per_page'   => '',
         'offset'           => 0,
         'category'         => '',
         'category_name'    => '',
@@ -29,12 +29,12 @@ function posts($args = []) {
         'post_type'        => 'post',
         'post_mime_type'   => '',
         'post_parent'      => '',
-        'author'	   => '',
+        'author'	   	   => '',
         'author_name'	   => '',
         'post_status'      => 'publish',
         'suppress_filters' => true,
         'fields'           => '',
-    ], $args);
+	], $args);
     // query the posts
     $posts = \get_posts($args);
     // transform each posts in a WPS_Post one
