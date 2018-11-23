@@ -1,6 +1,8 @@
 # util
 
 - [WPS::count_post_views](#WPS_count_post_views)
+- [WPS::dequeue_all_scripts](#WPS_dequeue_all_scripts)
+- [WPS::dequeue_all_styles](#WPS_dequeue_all_styles)
 - [WPS::disable_admin_bar](#WPS_disable_admin_bar)
 - [WPS::excerpt_length](#WPS_excerpt_length)
 - [WPS::google_analytics](#WPS_google_analytics)
@@ -18,6 +20,26 @@ WPS::count_post_views();
 ```
 
 [Full documentation](/doc/src/functions/util/count_post_views.md)
+
+<a name="WPS_dequeue_all_scripts"></a>
+## WPS::dequeue_all_scripts
+Unenqueue all scripts at once
+
+```php
+WPS::dequeue_all_scripts();
+```
+
+[Full documentation](/doc/src/functions/util/dequeue_all_scripts.md)
+
+<a name="WPS_dequeue_all_styles"></a>
+## WPS::dequeue_all_styles
+Unenqueue all styles at once
+
+```php
+WPS::dequeue_all_styles();
+```
+
+[Full documentation](/doc/src/functions/util/dequeue_all_styles.md)
 
 <a name="WPS_disable_admin_bar"></a>
 ## WPS::disable_admin_bar
