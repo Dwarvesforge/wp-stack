@@ -2,8 +2,9 @@
 
 - [WPS::add_wysiwyg_class](#WPS_add_wysiwyg_class)
 - [WPS::add_wysiwyg_stylesheet](#WPS_add_wysiwyg_stylesheet)
-- [WPS::remove_dashboard_meta_boxes](#WPS_remove_dashboard_meta_boxes)
+- [WPS::disable_admin_bar](#WPS_disable_admin_bar)
 - [WPS::remove_guttenberg_panel](#WPS_remove_guttenberg_panel)
+- [WPS::remove_welcome_panel](#WPS_remove_welcome_panel)
 - [WPS::reset_dashboard](#WPS_reset_dashboard)
 <a name="WPS_add_wysiwyg_class"></a>
 ## WPS::add_wysiwyg_class
@@ -25,17 +26,15 @@ WPS::add_wysiwyg_stylesheet('dist/css/style.css');
 
 [Full documentation](/doc/src/functions/admin/add_wysiwyg_stylesheet.md)
 
-<a name="WPS_remove_dashboard_meta_boxes"></a>
-## WPS::remove_dashboard_meta_boxes
-Remove some dashboard meta boxes by passing ther ids
+<a name="WPS_disable_admin_bar"></a>
+## WPS::disable_admin_bar
+Disable the admin bar in the frontend
 
 ```php
-WPS::remove_dashboard_meta_boxes([
-	'dashboard_right_now', 'dashboard_activity'
-]);
+WPS::disable_admin_bar();
 ```
 
-[Full documentation](/doc/src/functions/admin/remove_dashboard_meta_boxes.md)
+[Full documentation](/doc/src/functions/admin/disable_admin_bar.md)
 
 <a name="WPS_remove_try_guttenberg_panel"></a>
 ## WPS::remove_try_guttenberg_panel
@@ -46,6 +45,16 @@ WPS::remove_try_guttenberg_panel();
 ```
 
 [Full documentation](/doc/src/functions/admin/remove_guttenberg_panel.md)
+
+<a name="WPS_remove_welcome_panel"></a>
+## WPS::remove_welcome_panel
+Remove welcome panel in admin
+
+```php
+WPS::remove_welcome_panel();
+```
+
+[Full documentation](/doc/src/functions/admin/remove_welcome_panel.md)
 
 <a name="WPS_reset_dashboard"></a>
 ## WPS::reset_dashboard

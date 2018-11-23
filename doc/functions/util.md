@@ -3,12 +3,10 @@
 - [WPS::count_post_views](#WPS_count_post_views)
 - [WPS::dequeue_all_scripts](#WPS_dequeue_all_scripts)
 - [WPS::dequeue_all_styles](#WPS_dequeue_all_styles)
-- [WPS::disable_admin_bar](#WPS_disable_admin_bar)
 - [WPS::excerpt_length](#WPS_excerpt_length)
 - [WPS::google_analytics](#WPS_google_analytics)
 - [WPS::google_tag_manager](#WPS_google_tag_manager)
 - [WPS::remove_version](#WPS_remove_version)
-- [WPS::remove_welcome_panel](#WPS_remove_welcome_panel)
 - [WPS::session_start](#WPS_session_start)
 <a name="WPS_count_post_views"></a>
 ## WPS::count_post_views
@@ -40,16 +38,6 @@ WPS::dequeue_all_styles();
 ```
 
 [Full documentation](/doc/src/functions/util/dequeue_all_styles.md)
-
-<a name="WPS_disable_admin_bar"></a>
-## WPS::disable_admin_bar
-Disable the admin bar in the frontend
-
-```php
-WPS::disable_admin_bar();
-```
-
-[Full documentation](/doc/src/functions/util/disable_admin_bar.md)
 
 <a name="WPS_excerpt_length"></a>
 ## WPS::excerpt_length
@@ -90,16 +78,6 @@ WPS::remove_version();
 ```
 
 [Full documentation](/doc/src/functions/util/remove_version.md)
-
-<a name="WPS_remove_welcome_panel"></a>
-## WPS::remove_welcome_panel
-Remove welcome panel in admin
-
-```php
-WPS::remove_welcome_panel();
-```
-
-[Full documentation](/doc/src/functions/util/remove_welcome_panel.md)
 
 <a name="WPS_session_start"></a>
 ## WPS::session_start
