@@ -38,6 +38,7 @@ Wordpress stack that gives you nice classes as wrapper of the wordpress ones as 
 - [Image](doc/functions/image.md)
 - [Media](doc/functions/media.md)
 - [Menu](doc/functions/menu.md)
+- [Metabox](doc/functions/metabox.md)
 - [Pagination](doc/functions/pagination.md)
 - [Post](doc/functions/post.md)
 - [Search](doc/functions/search.md)
