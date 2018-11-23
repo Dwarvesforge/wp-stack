@@ -19,9 +19,9 @@ function google_analytics($id, $position = 'head') {
 	$WPS_google_analytics_id = $id;
 
 	if ($position === 'head') {
-		add_action('wp_head', 'WPS\_google_analytics');
+		\add_action('wp_head', 'WPS\_google_analytics');
 	} else {
-		add_action('wp_footer', 'WPS\_google_analytics');
+		\add_action('wp_footer', 'WPS\_google_analytics');
 	}
 }
 function _google_analytics() {

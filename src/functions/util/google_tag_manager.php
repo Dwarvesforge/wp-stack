@@ -19,9 +19,9 @@ function google_tag_manager($id, $position = 'head') {
 	$WPS_google_tag_manager_id = $id;
 
 	if ($position === 'head') {
-		add_action('wp_head', 'WPS\_google_tag_manager');
+		\add_action('wp_head', 'WPS\_google_tag_manager');
 	} else {
-		add_action('wp_footer', 'WPS\_google_tag_manager');
+		\add_action('wp_footer', 'WPS\_google_tag_manager');
 	}
 }
 function _google_tag_manager() {

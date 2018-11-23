@@ -31,6 +31,9 @@ wps_require_folder('media');
 // menu
 wps_require_folder('menu');
 
+// metabox
+wps_require_folder('metabox');
+
 // pagination
 wps_require_folder('pagination');
 

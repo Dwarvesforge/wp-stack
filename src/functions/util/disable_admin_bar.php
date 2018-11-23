@@ -11,5 +11,5 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function disable_admin_bar() {
-	add_filter('show_admin_bar', '__return_false');
+	\add_filter('show_admin_bar', '__return_false');
 }

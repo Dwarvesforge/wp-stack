@@ -14,7 +14,7 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function users_count() {
-	$usercount = count_users();
+	$usercount = \count_users();
 	$result = $usercount['total_users'];
 	return $result;
 }

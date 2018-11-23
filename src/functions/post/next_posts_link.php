@@ -15,9 +15,9 @@ use PHPHtmlParser\Dom;
  */
 function next_posts_link($label = '') {
     // generate the next link
-    ob_start();
+    \ob_start();
     \next_posts_link($label);
-    $link = ob_get_clean();
+    $link = \ob_get_clean();
     if (empty($link)) return false;
     // init a new dom instance
     $dom = new Dom;

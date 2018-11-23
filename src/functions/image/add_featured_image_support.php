@@ -11,5 +11,5 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com>
  */
 function add_featured_image_support() {
-	add_theme_support('post-thumbnails');
+	\add_theme_support('post-thumbnails');
 }

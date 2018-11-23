@@ -15,7 +15,7 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function user($id) {
-	$by = (is_integer($id)) ? 'id' : 'email';
-	$user = get_user_by($by, $id);
+	$by = (\is_integer($id)) ? 'id' : 'email';
+	$user = \get_user_by($by, $id);
 	return new \WPS\User($user);
 }

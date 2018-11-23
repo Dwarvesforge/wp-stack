@@ -20,7 +20,7 @@ function add_wysiwyg_class($classes) {
 	}
 	$WPS_add_wysiwyg_class = \Thorin::array_concat($WPS_add_wysiwyg_class, $classes);
 	// hook the tinymce initialisation
-	add_filter( 'tiny_mce_before_init', 'WPS\_add_wysiwyg_class' );
+	\add_filter( 'tiny_mce_before_init', 'WPS\_add_wysiwyg_class' );
 }
 function _add_wysiwyg_class($in) {
 	global $WPS_add_wysiwyg_class;

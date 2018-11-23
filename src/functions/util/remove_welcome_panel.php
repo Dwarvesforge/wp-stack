@@ -11,5 +11,5 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function remove_welcome_panel() {
-	remove_action('welcome_panel', 'wp_welcome_panel');
+	\remove_action('welcome_panel', 'wp_welcome_panel');
 }

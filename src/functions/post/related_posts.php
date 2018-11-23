@@ -21,7 +21,7 @@ namespace WPS;
  */
 function related_posts($post_id, $count = 3, $args = []) {
 	// grab the post tags :
-	$tags = wp_get_post_tags($post_id);
+	$tags = \wp_get_post_tags($post_id);
 	$tag_ids = [];
 	if ($tags) {
 		foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
