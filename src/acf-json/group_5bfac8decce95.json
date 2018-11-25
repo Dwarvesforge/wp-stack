@@ -1,0 +1,45 @@
+{
+    "key": "group_5bfac8decce95",
+    "title": "Post",
+    "fields": [
+        {
+            "key": "field_5bfac8e4102a7",
+            "label": "Excerpt length",
+            "name": "wps_options_post_excerpt_length",
+            "type": "number",
+            "instructions": "Set the excerpt length (number of words)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 10,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543162209
+}

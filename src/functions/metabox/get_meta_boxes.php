@@ -16,7 +16,7 @@ namespace WPS;
  * @see    https://wordpress.stackexchange.com/questions/56104/get-list-of-registered-meta-boxes-and-removing-them
  */
 function get_meta_boxes( $screen = null, $context = 'advanced' ) {
-    global $wp_meta_boxes;
+	global $wp_meta_boxes;
     if ( empty( $screen ) )
         $screen = get_current_screen();
     elseif ( is_string( $screen ) )

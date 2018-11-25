@@ -10,6 +10,9 @@ function wps_require_folder($folder) {
     }
 }
 
+// acf
+wps_require_folder('acf');
+
 // admin
 wps_require_folder('admin');
 
