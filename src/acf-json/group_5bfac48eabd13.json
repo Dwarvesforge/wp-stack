@@ -1,6 +1,6 @@
 {
     "key": "group_5bfac48eabd13",
-    "title": "General",
+    "title": "WPS General",
     "fields": [
         {
             "key": "field_5bfac4a5458cb",
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543163141
+    "modified": 1543175296
 }

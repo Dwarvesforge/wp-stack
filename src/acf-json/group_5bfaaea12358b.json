@@ -1,6 +1,6 @@
 {
     "key": "group_5bfaaea12358b",
-    "title": "Dashboard",
+    "title": "WPS Dashboard",
     "fields": [
         {
             "key": "field_5bfabd67c767c",
@@ -98,5 +98,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543161236
+    "modified": 1543175278
 }

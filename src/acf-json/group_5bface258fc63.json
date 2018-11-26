@@ -1,13 +1,13 @@
 {
-    "key": "group_5bfac8decce95",
-    "title": "WPS Post",
+    "key": "group_5bface258fc63",
+    "title": "WPS Images",
     "fields": [
         {
-            "key": "field_5bfac8e4102a7",
-            "label": "Excerpt length",
-            "name": "wps_options_post_excerpt_length",
-            "type": "number",
-            "instructions": "Set the excerpt length (number of words)",
+            "key": "field_5bface336f9e2",
+            "label": "Jpg Quality",
+            "name": "wps_options_images_jpg_quality",
+            "type": "range",
+            "instructions": "Specify the default image compression quality",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,13 +15,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": 10,
-            "prepend": "",
-            "append": "",
+            "default_value": 90,
             "min": "",
             "max": "",
-            "step": ""
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -41,5 +40,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543175323
+    "modified": 1543175310
 }

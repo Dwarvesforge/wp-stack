@@ -1,6 +1,6 @@
 {
     "key": "group_5bfac11bbc937",
-    "title": "WYSIWYG Editor",
+    "title": "WPS WYSIWYG Editor",
     "fields": [
         {
             "key": "field_5bfac12439c4f",
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543160483
+    "modified": 1543175449
 }
