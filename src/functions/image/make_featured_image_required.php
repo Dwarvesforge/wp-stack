@@ -27,7 +27,8 @@ function _make_featured_image_required_check_thumbnail($post_id) {
 	if (\in_array($post_type, $wps_make_featured_image_required_post_types) != true)
 		return;
 
-    if ( !\has_post_thumbnail( $post_id ) ) {
+    if ( !\has_post_thumbnail($post_id) && get_post_status($post_id) == 'publish' ) {
+
         // set a transient to show the users an admin message
         \set_transient( "has_post_thumbnail", "no" );
         // unhook this function so it doesn't loop infinitely

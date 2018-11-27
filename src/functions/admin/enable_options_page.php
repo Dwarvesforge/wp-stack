@@ -11,6 +11,11 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbosel.com)
  */
 function enable_options_page() {
+
+	if (!function_exists('acf_add_options_page')) {
+		throw new \Exception('To use the function "WPS::enable_options_page()", you must have the plugin ACF Pro installed');
+	}
+
 	// add the options page in the menu
 	// as well as for the ACF plugin
 	if (function_exists('acf_add_options_page') && current_user_can('administrator')) {
@@ -23,6 +28,8 @@ function enable_options_page() {
 		]);
 	}
 
-	// load the options handlers
-	require_once __DIR__ . '/../../options/autoload.php';
+	if (function_exists('acf_add_options_page')) {
+		// load the options handlers
+		require_once __DIR__ . '/../../options/autoload.php';
+	}
 }

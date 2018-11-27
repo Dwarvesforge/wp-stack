@@ -28,6 +28,9 @@ wps_require_folder('comment');
 // image
 wps_require_folder('image');
 
+// is
+wps_require_folder('is');
+
 // media
 wps_require_folder('media');
 

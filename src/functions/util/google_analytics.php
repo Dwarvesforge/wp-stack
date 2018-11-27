@@ -2,9 +2,8 @@
 
 namespace WPS;
 
-$WPS_google_analytics_id;
 /**
- * Add google analytics
+ * Add google analytics only for real visitors and not for connected administrators, authors, etc...
  *
  * @param    {String}    $id    The google analytics id
  * @param    {String}    [$position='head']    The position where to put the analytics code. Can be `head` or `footer`
@@ -15,26 +14,23 @@ $WPS_google_analytics_id;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function google_analytics($id, $position = 'head') {
-	global $WPS_google_analytics_id;
-	$WPS_google_analytics_id = $id;
 
-	if ($position === 'head') {
-		\add_action('wp_head', 'WPS\_google_analytics');
-	} else {
-		\add_action('wp_footer', 'WPS\_google_analytics');
-	}
-}
-function _google_analytics() {
-	global $WPS_google_analytics_id;
-	print '
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id='.$WPS_google_analytics_id.'"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag("js", new Date());
+	// stop here if the user is not a visitor
+	// cause we don't want to track connected "admins"
+	if (!\WPS::is_visitor()) return;
 
-		gtag("config", "'.$WPS_google_analytics_id.'");
-		</script>
-	';
+	$action = ($position === 'head') ? 'wp_head' : 'wp_footer';
+	\add_action($action, function() use($id) {
+		print '
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id='.$id.'"></script>
+			<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag("js", new Date());
+
+			gtag("config", "'.$id.'");
+			</script>
+		';
+	});
 }

@@ -77,6 +77,27 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5bfbf4f1c7db4",
+            "label": "Search results per page",
+            "name": "wps_options_search_results_per_page",
+            "type": "number",
+            "instructions": "How many results to display by page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 10,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -96,5 +117,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543175296
+    "modified": 1543239007
 }

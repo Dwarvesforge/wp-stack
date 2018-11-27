@@ -22,6 +22,25 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5bfbed9ea8fec",
+            "label": "Count post views",
+            "name": "wps_options_post_count_post_views",
+            "type": "true_false",
+            "instructions": "Track the number of views by post?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this if you want to track the number of views per post",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -41,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543175323
+    "modified": 1543238600
 }
