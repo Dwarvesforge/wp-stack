@@ -7,7 +7,7 @@ Change the excerpt length
 ### Parameters
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
-$length  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The new excerpt length  |  optional  |  100
+$length  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The new excerpt length  |  optional  |  20
 
 ### Example
 ```php

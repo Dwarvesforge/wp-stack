@@ -18,7 +18,7 @@ $WPS_remove_mime_types = [];
 function remove_mime_types($mimes) {
 	global $WPS_remove_mime_types;
 	$WPS_remove_mime_types = $mimes;
-	add_filter('upload_mimes', 'WPS\_remove_mime_types', 1, 1);
+	\add_filter('upload_mimes', 'WPS\_remove_mime_types', 1, 1);
 }
 function _remove_mime_types($mime_types) {
 	global $WPS_remove_mime_types;

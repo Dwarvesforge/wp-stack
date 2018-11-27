@@ -31,13 +31,16 @@
 
 Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions in these areas:
 
+- [ACF](doc/functions/acf.md)
 - [Admin](doc/functions/admin.md)
 - [Archive](doc/functions/archive.md)
 - [Categorie](doc/functions/categorie.md)
 - [Comment](doc/functions/comment.md)
 - [Image](doc/functions/image.md)
+- [Is](doc/functions/is.md)
 - [Media](doc/functions/media.md)
 - [Menu](doc/functions/menu.md)
+- [Metabox](doc/functions/metabox.md)
 - [Pagination](doc/functions/pagination.md)
 - [Post](doc/functions/post.md)
 - [Search](doc/functions/search.md)
@@ -59,9 +62,10 @@ Wordpress stack that gives you nice classes as wrapper of the wordpress ones as 
 1. [Goals](#readme-goals)
 2. [Install](#readme-install)
 3. [Documentation](doc)
-4. [Contribute](#readme-contribute)
-5. [License](#readme-license)
-6. [Who are Dwarvesforge](#readme-who-are-dwarvesforge)
+4. [Options page](#readme-options-page)
+5. [Contribute](#readme-contribute)
+6. [License](#readme-license)
+7. [Who are Dwarvesforge](#readme-who-are-dwarvesforge)
 
 <a id="readme-goals"></a>
 ## Goals
@@ -75,6 +79,18 @@ We will make this package grow every time we encounter and implement some nice f
 ```
 composer require dwarvesforge/wp-stack
 ```
+
+<a id="readme-options-page"></a>
+## Options page
+
+![Options page](.resources/options-page.png)
+
+WP-Stack offer the ability to have an options page in the admin that expose a UI to some of the programatic features like `google_analytics`, `excerpt_length`, `set_login_logo`, etc...
+
+In order to access this page, you'll need two things:
+
+1. Having a proper running [ACF Advanced Custom Fields PRO](https://www.advancedcustomfields.com/pro/) plugin installed
+2. Call the `WPS::enable_options_page()` function in your `functions.php` file
 
 <a id="readme-contribute"></a>
 ## Contribute

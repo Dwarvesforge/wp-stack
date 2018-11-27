@@ -11,7 +11,7 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function remove_version() {
-    add_filter('the_generator', 'WPS\_wps_remove_version');
+    \add_filter('the_generator', 'WPS\_wps_remove_version');
 }
 function _wps_remove_version() {
     return '';

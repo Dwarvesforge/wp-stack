@@ -1,5 +1,8 @@
 <?php
 
+// internal
+require_once 'internal/autoload.php';
+
 // classes
 require_once 'classes/autoload.php';
 

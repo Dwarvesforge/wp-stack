@@ -11,7 +11,7 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function comment_remove_url_field() {
-	add_filter('comment_form_default_fields','WPS\_comment_remove_url_field');
+	\add_filter('comment_form_default_fields','WPS\_comment_remove_url_field');
 }
 function _comment_remove_url_field($fields) {
 	unset($fields['url']);

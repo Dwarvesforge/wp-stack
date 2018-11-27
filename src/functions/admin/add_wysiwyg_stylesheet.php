@@ -13,5 +13,5 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function add_wysiwyg_stylesheet($stylesheets) {
-	add_editor_style($stylesheets);
+	\add_editor_style($stylesheets);
 }

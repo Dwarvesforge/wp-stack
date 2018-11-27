@@ -44,9 +44,9 @@ function pagination($args = []) {
         $label = trim($item->innerHtml);
         if ($url === '' && $label === '') continue;
         \array_push($res, (object) [
-            'is_next' => strpos($item->getAttribute('class'), 'next') !== false,
-            'is_prev' => strpos($item->getAttribute('class'), 'prev') !== false,
-            'is_current' => strpos($item->getAttribute('class'), 'current') !== false,
+            'is_next' => \strpos($item->getAttribute('class'), 'next') !== false,
+            'is_prev' => \strpos($item->getAttribute('class'), 'prev') !== false,
+            'is_current' => \strpos($item->getAttribute('class'), 'current') !== false,
             'url' => $url,
             'label' => $label
         ]);

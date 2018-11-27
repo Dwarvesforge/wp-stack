@@ -15,7 +15,7 @@ namespace WPS;
  */
 function post($id = null) {
 	if (!$id) {
-		$id = get_the_ID();
+		$id = \get_the_ID();
 	}
     $post = \get_post($id);
     // wrap it into a WPS_Post instance

@@ -10,6 +10,9 @@ function wps_require_folder($folder) {
     }
 }
 
+// acf
+wps_require_folder('acf');
+
 // admin
 wps_require_folder('admin');
 
@@ -25,11 +28,17 @@ wps_require_folder('comment');
 // image
 wps_require_folder('image');
 
+// is
+wps_require_folder('is');
+
 // media
 wps_require_folder('media');
 
 // menu
 wps_require_folder('menu');
+
+// metabox
+wps_require_folder('metabox');
 
 // pagination
 wps_require_folder('pagination');

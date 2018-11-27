@@ -1,0 +1,121 @@
+{
+    "key": "group_5bfac48eabd13",
+    "title": "WPS General",
+    "fields": [
+        {
+            "key": "field_5bfac4a5458cb",
+            "label": "Disable admin bar",
+            "name": "wps_options_disable_admin_bar",
+            "type": "true_false",
+            "instructions": "Disable the admin bar?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this if you want to disable the admin bar",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bfacca8fc32c",
+            "label": "Remove wordpress version",
+            "name": "wps_options_remove_wordpress_version",
+            "type": "true_false",
+            "instructions": "Remove the wordpress version in the mets tags?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this to remove the wordpress version in the metas tags",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bfacaa6e6fbe",
+            "label": "Google analytics id",
+            "name": "wps_options_google_analytics_id",
+            "type": "text",
+            "instructions": "Set the google analytics id",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "UA-XXXXXX-X",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bfacb26e6fbf",
+            "label": "Google tag manager id",
+            "name": "wps_options_google_tag_manager_id",
+            "type": "text",
+            "instructions": "Set the google tag manager id",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "GTM-XXXX",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bfbf4f1c7db4",
+            "label": "Search results per page",
+            "name": "wps_options_search_results_per_page",
+            "type": "number",
+            "instructions": "How many results to display by page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 10,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543239007
+}

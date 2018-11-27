@@ -1,0 +1,64 @@
+{
+    "key": "group_5bfac8decce95",
+    "title": "WPS Post",
+    "fields": [
+        {
+            "key": "field_5bfac8e4102a7",
+            "label": "Excerpt length",
+            "name": "wps_options_post_excerpt_length",
+            "type": "number",
+            "instructions": "Set the excerpt length (number of words)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 10,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5bfbed9ea8fec",
+            "label": "Count post views",
+            "name": "wps_options_post_count_post_views",
+            "type": "true_false",
+            "instructions": "Track the number of views by post?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Check this if you want to track the number of views per post",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543238600
+}

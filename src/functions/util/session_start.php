@@ -13,7 +13,7 @@ namespace WPS;
  * @author    Olivier Bossel <olivier.bossel@gmail.com> (https://olivierbossel.com)
  */
 function session_start() {
-	add_action('init', 'WPS\_wps_session_start');
+	\add_action('init', 'WPS\_wps_session_start');
 }
 function _wps_session_start() {
 	if(!\session_id() ) {

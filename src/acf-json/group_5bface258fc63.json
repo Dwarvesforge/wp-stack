@@ -1,0 +1,143 @@
+{
+    "key": "group_5bface258fc63",
+    "title": "WPS Media",
+    "fields": [
+        {
+            "key": "field_5bface336f9e2",
+            "label": "Jpg Quality",
+            "name": "wps_options_media_jpg_quality",
+            "type": "range",
+            "instructions": "Specify the default image compression quality",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 90,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5bfbe4f36609e",
+            "label": "Add mime types",
+            "name": "wps_options_media_add_mime_types",
+            "type": "repeater",
+            "instructions": "Add some mime types support to this wordpress installation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5bfbe52d6609f",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add mime type",
+            "sub_fields": [
+                {
+                    "key": "field_5bfbe52d6609f",
+                    "label": "Extension",
+                    "name": "wps_options_medias_add_mime_types_extension",
+                    "type": "text",
+                    "instructions": "The file extension to add support for",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "jpg",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5bfbe57a660a0",
+                    "label": "Mime type",
+                    "name": "wps_options_medias_add_mime_types_mime_type",
+                    "type": "text",
+                    "instructions": "The mime type of the extension",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "image\/jpg",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5bfbe9d3516eb",
+            "label": "Remove mime types",
+            "name": "wps_options_media_remove_mime_types",
+            "type": "text",
+            "instructions": "Remove mime types by extension (comma separated)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "jpg, png, mp4",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bfc22e7e81a0",
+            "label": "Upload size limit",
+            "name": "wps_options_upload_size_limit",
+            "type": "number",
+            "instructions": "Set the upload size limit in mb",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 32,
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543250787
+}

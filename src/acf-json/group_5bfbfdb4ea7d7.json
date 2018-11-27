@@ -1,0 +1,88 @@
+{
+    "key": "group_5bfbfdb4ea7d7",
+    "title": "WPS Admin",
+    "fields": [
+        {
+            "key": "field_5bfbfdbbedb32",
+            "label": "Login logo",
+            "name": "wps_options_login_logo",
+            "type": "image",
+            "instructions": "Set a custom login form logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,png,gif"
+        },
+        {
+            "key": "field_5bfc06e038a31",
+            "label": "Login logo url",
+            "name": "wps_options_login_logo_url",
+            "type": "text",
+            "instructions": "Specify the login form logo url",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/my-cool-website.com",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bfc294ac12df",
+            "label": "Auth cookie expiration",
+            "name": "wps_options_auth_cookie_expiration",
+            "type": "number",
+            "instructions": "Set the auth cookie expiration timeout in seconds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 2592000,
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543252384
+}

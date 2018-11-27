@@ -19,7 +19,7 @@ $WPS_add_mime_types = [];
 function add_mime_types($mimes) {
 	global $WPS_add_mime_types;
 	$WPS_add_mime_types = $mimes;
-	add_filter('upload_mimes', 'WPS\_add_mime_types', 1, 1);
+	\add_filter('upload_mimes', 'WPS\_add_mime_types', 1, 1);
 }
 function _add_mime_types($mime_types) {
 	global $WPS_add_mime_types;

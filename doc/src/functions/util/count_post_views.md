@@ -1,6 +1,6 @@
 # count_post_views
 
-Count the number of views on each posts (pages, etc...).
+Count the number of views on each posts (pages, etc...) only for real visitors and not for connected administrators, authors, etc...
 This function will add and maintain a post meta value called `post_viewed` that you can use later for to make queries.
 
 

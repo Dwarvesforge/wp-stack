@@ -1,0 +1,62 @@
+{
+    "key": "group_5bfac11bbc937",
+    "title": "WPS WYSIWYG Editor",
+    "fields": [
+        {
+            "key": "field_5bfac12439c4f",
+            "label": "Additional classes",
+            "name": "wps_options_wysiwyg_additional_classes",
+            "type": "text",
+            "instructions": "Additional classes to set on the WYSIWYG editor",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "tf vr",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bfac19a39c50",
+            "label": "Stylesheets",
+            "name": "wps_options_wysiwyg_stylesheet",
+            "type": "text",
+            "instructions": "Additional stylesheet to load inside the WYSIWYG editor relative to your wordpress root installation path",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "wp-content\/themes\/my-theme\/css\/wysiwyg.css",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "wps-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543175449
+}
