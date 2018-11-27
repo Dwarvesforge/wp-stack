@@ -1,6 +1,6 @@
 # google_analytics
 
-Add google analytics
+Add google analytics only for real visitors and not for connected administrators, authors, etc...
 
 
 

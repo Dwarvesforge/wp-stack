@@ -1,5 +1,6 @@
 # util
 
+- [WPS::auth_cookie_expiration](#WPS_auth_cookie_expiration)
 - [WPS::count_post_views](#WPS_count_post_views)
 - [WPS::dequeue_all_scripts](#WPS_dequeue_all_scripts)
 - [WPS::dequeue_all_styles](#WPS_dequeue_all_styles)
@@ -8,9 +9,19 @@
 - [WPS::google_tag_manager](#WPS_google_tag_manager)
 - [WPS::remove_version](#WPS_remove_version)
 - [WPS::session_start](#WPS_session_start)
+<a name="WPS_auth_cookie_expiration"></a>
+## WPS::auth_cookie_expiration
+Set the authentication cookie expiration in seconds
+
+```php
+WPS::auth_cookie_expiration(60 * 60 * 24 * 30); // 1 month
+```
+
+[Full documentation](/doc/src/functions/util/auth_cookie_expiration.md)
+
 <a name="WPS_count_post_views"></a>
 ## WPS::count_post_views
-Count the number of views on each posts (pages, etc...).
+Count the number of views on each posts (pages, etc...) only for real visitors and not for connected administrators, authors, etc...
 This function will add and maintain a post meta value called `post_viewed` that you can use later for to make queries.
 
 ```php
@@ -51,7 +62,7 @@ WPS::excerpt_length(200);
 
 <a name="WPS_google_analytics"></a>
 ## WPS::google_analytics
-Add google analytics
+Add google analytics only for real visitors and not for connected administrators, authors, etc...
 
 ```php
 WPS::google_analytics('xxxxxx');
@@ -61,7 +72,7 @@ WPS::google_analytics('xxxxxx');
 
 <a name="WPS_google_tag_manager"></a>
 ## WPS::google_tag_manager
-Add google tag manager
+Add google tag manager only for real visitors and not for connected administrators, authors, etc...
 
 ```php
 WPS::google_tag_manager('xxxxxx');
