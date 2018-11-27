@@ -1,6 +1,6 @@
 # google_tag_manager
 
-Add google tag manager
+Add google tag manager only for real visitors and not for connected administrators, authors, etc...
 
 
 

@@ -1,16 +1,16 @@
-# excerpt_length
+# auth_cookie_expiration
 
-Change the excerpt length
+Set the authentication cookie expiration in seconds
 
 
 
 ### Parameters
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
-$length  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The new excerpt length  |  optional  |  20
+$timeout  |  **{ [Integer](http://php.net/manual/en/language.types.integer.php) }**  |  The expiration timeout in seconds  |  required  |
 
 ### Example
 ```php
-	WPS::excerpt_length(200);
+	WPS::auth_cookie_expiration(60 * 60 * 24 * 30); // 1 month
 ```
 Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com) [https://olivierbossel.com](https://olivierbossel.com)

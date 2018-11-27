@@ -1,6 +1,6 @@
 {
     "name": "dwarvesforge/wp-stack",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "Wordpress stack that gives you nice classes as wrapper of the wordpress ones as well as some nice helper functions.",
     "keywords": [
         "wp",
